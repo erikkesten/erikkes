@@ -199,9 +199,9 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 }
 
 .logo{
-  width:70;
-  height:70;
-  margin-bottom: -10px;
+  width:60;
+  height:60;
+  margin-bottom: 0px;
   margin-left: 30px;
   display: flex;
   justify-content: flex-end;
@@ -269,6 +269,20 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   width: 520px;
   margin-bottom: 20px;
 
+}
+
+ion-icon {
+  color: #F66D33;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+
+.navbar {
+    margin-top: -5px;
+}
+
+.link{
+      margin-bottom: -7px;
 }
 
 
@@ -392,7 +406,12 @@ margin-left:0
     margin-bottom: 20px;
   }
 
-  }
+  .remove-me {
+    display: none;
+}
+
+}
+
 
 
 

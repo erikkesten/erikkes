@@ -40,12 +40,24 @@ gallery
 
 <div class="right">
 
-  <img src="img/home.png" class="icon">
-  <a href="index.html" class="orange">Home</a>
-  <img src="img/about.png" class="icon">
-  <a href="about.html" class="orange">About</a>
-  <img src="img/gallery.png" class="icon">
-  <a href="gallery.html" class="orange">Gallery</a>
+  <a href="index.html">
+  <ion-icon name="home" size="large navbar"></ion-icon>
+  </a>
+
+    <a href="index.html" class="orange remove-me">Home</a>
+
+  <a href="about.html">
+  <ion-icon name="information-circle" size="large navbar"></ion-icon>
+  </a>
+
+    <a href="about.html" class="orange remove-me">About</a>
+
+  <a href="gallery.html">
+  <ion-icon name="images" size="large navbar"></ion-icon>
+  </a>
+
+    <a href="gallery.html" class="orange remove-me">Gallery</a>
+
 </div>
 
 </div>
@@ -68,7 +80,13 @@ gallery
         </a>
 
         <p>Lowpoly 3D model of Mitsubishi Evo</p>
-        <a href="https://skfb.ly/oQANw" target="_blank" class="orange">+ View More</a>
+        <br>
+
+        <a href="https://skfb.ly/oQANw">
+        <ion-icon name="add-circle" size="large link"></ion-icon>
+        </a>
+
+        <a href="https://skfb.ly/oQANw" target="_blank" class="orange">View More</a>
         <br>
         <br>
 
@@ -80,16 +98,29 @@ gallery
 
 
   <div class="center">
-        <img src="img/home.png" class="icon">
+      <a href="https://sketchfab.com/erikkes">
+        <ion-icon name="cube" size="large link"></ion-icon>
+      </a>
+
         <a href="https://sketchfab.com/erikkes" target="_blank" class="orange">Sketchfab (WIP)</a>
         <br>
         <br>
-        <img src="img/home.png" class="icon">
+
+      <a href="https://www.youtube.com/@erikkesten6079">
+        <ion-icon name="logo-youtube" size="large link"></ion-icon>
+      </a>
+
         <a href="https://www.youtube.com/@erikkesten6079" target="_blank" class="orange">YouTube (erikkes)</a>
-        <img src="img/home.png" class="icon">
+
+
+      <a href="https://www.youtube.com/@carrikow2726">
+        <ion-icon name="logo-youtube" size="large link"></ion-icon>
+      </a>
+
         <a href="https://www.youtube.com/@carrikow2726" target="_blank" class="orange">YouTube (carrikow)</a>
         <br>
         <br>
+
         <img src="img/under-construction.gif" class="pad">
         <br>
         <br>
@@ -103,15 +134,21 @@ gallery
 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
 <h3>Hey, are you trying to leave!?</h3>
-<img src="img/home.png" class="icon">
+<a href="https://sketchfab.com/erikkes">
+<ion-icon name="cube" size="large link"></ion-icon>
+</a>
 <a href="https://sketchfab.com/erikkes" target="_blank" class="orange">Sketchfab (WIP)</a>
 <br>
 <br>
-<img src="img/home.png" class="icon">
+<a href="https://www.youtube.com/@erikkesten6079">
+<ion-icon name="logo-youtube" size="large link"></ion-icon>
+</a>
 <a href="https://www.youtube.com/@erikkesten6079" target="_blank" class="orange">YouTube (erikkes)</a>
 <br>
 <br>
-<img src="img/home.png" class="icon">
+<a href="https://www.youtube.com/@carrikow2726">
+<ion-icon name="logo-youtube" size="large link"></ion-icon>
+</a>
 <a href="https://www.youtube.com/@carrikow2726" target="_blank" class="orange">YouTube (carrikow)</a>
 </div>
 
@@ -180,6 +217,10 @@ $(document).ready(function() {
 	});
 });
 </script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 

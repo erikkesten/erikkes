@@ -34,18 +34,28 @@ home
 
 <div class="header">
 
-  <a href="index.html">
-  <img src="img/logo.png" class="logo">
-  </a>
+  <img src="img/logo.png" class="logo" href="index.html">
 
 <div class="right">
 
-  <img src="img/home.png" class="icon">
-  <a href="index.html" class="orange">Home</a>
-  <img src="img/about.png" class="icon">
-  <a href="about.html" class="orange">About</a>
-  <img src="img/gallery.png" class="icon">
-  <a href="gallery.html" class="orange">Gallery</a>
+<a href="index.html">
+<ion-icon name="home" size="large navbar"></ion-icon>
+</a>
+
+  <a href="index.html" class="orange remove-me">Home</a>
+
+<a href="about.html">
+<ion-icon name="information-circle" size="large navbar"></ion-icon>
+</a>
+
+  <a href="about.html" class="orange remove-me">About</a>
+
+<a href="gallery.html">
+<ion-icon name="images" size="large navbar"></ion-icon>
+</a>
+
+  <a href="gallery.html" class="orange remove-me">Gallery</a>
+
 </div>
 
 </div>
@@ -64,9 +74,16 @@ home
         <br>
 
   <div class="center">
-        <img src="img/home.png" class="icon">
+      <a href="https://www.youtube.com/@erikkesten6079">
+        <ion-icon name="logo-youtube" size="large link"></ion-icon>
+      </a>
+
         <a href="https://www.youtube.com/@erikkesten6079" target="_blank" class="orange">YouTube (erikkes)</a>
-        <img src="img/about.png" class="icon">
+
+      <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=erik@kesten.se">
+        <ion-icon name="mail" size="large link"></ion-icon>
+      </a>
+
         <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=erik@kesten.se" target="_blank" class="orange">Email</a>
 
         <br>
@@ -92,15 +109,21 @@ home
 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
 <h3>Hey, are you trying to leave!?</h3>
-<img src="img/home.png" class="icon">
+<a href="https://sketchfab.com/erikkes">
+<ion-icon name="cube" size="large link"></ion-icon>
+</a>
 <a href="https://sketchfab.com/erikkes" target="_blank" class="orange">Sketchfab (WIP)</a>
 <br>
 <br>
-<img src="img/home.png" class="icon">
+<a href="https://www.youtube.com/@erikkesten6079">
+<ion-icon name="logo-youtube" size="large link"></ion-icon>
+</a>
 <a href="https://www.youtube.com/@erikkesten6079" target="_blank" class="orange">YouTube (erikkes)</a>
 <br>
 <br>
-<img src="img/home.png" class="icon">
+<a href="https://www.youtube.com/@carrikow2726">
+<ion-icon name="logo-youtube" size="large link"></ion-icon>
+</a>
 <a href="https://www.youtube.com/@carrikow2726" target="_blank" class="orange">YouTube (carrikow)</a>
 </div>
 
@@ -149,7 +172,11 @@ $(document).ready(function() {
 		mainClass: 'my-mfp-slide-bottom'
 	});
 });
+
 </script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 
