@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+
+<title>
+home
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<link href="css/bootstrap.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.typekit.net/jzs1ksm.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    <h2>erikkes.me</h2>
+
+    <div class="right">
+    <a class="popup-with-move-anim" href="#small-dialog"><h2>X</h2></a>
+    </div>
+
+  </div>
+
+<div class="header">
+
+  <img src="img/logo.png" class="logo">
+
+<div class="right">
+
+  <img src="img/home.png" class="icon">
+  <a href="home.html" class="orange">Home</a>
+  <img src="img/about.png" class="icon">
+  <a href="about.html" class="orange">About</a>
+  <img src="img/gallery.png" class="icon">
+  <a href="gallery.html" class="orange">Gallery</a>
+</div>
+
+</div>
+
+<div class="main">
+
+  <div class"">
+        <br>
+        <br>
+        <p class="txtL">Hi, my name is Erik Kesten...</p>
+        <p class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac augue ac magna pellentesque feugiat vel quis orci. Mauris convallis sem id tincidunt commodo.</p>
+
+  <div class="center">
+        <img src="img/home.png" class="icon">
+        <a href="https://www.youtube.com/@erikkesten6079" target="_blank" class="orange">YouTube (erikkes)</a>
+        <img src="img/about.png" class="icon">
+        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=erik@kesten.se" target="_blank" class="orange">Email</a>
+
+        <br>
+        <br>
+        <iframe src="https://www.youtube-nocookie.com/embed/i21GZnh3lss?si=kt0wqmN89l2bsPSP" class="yt"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/rBTfBLNdzg8?si=Vultmo8zCBWOgUQb" class="yt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <div class="center">
+        <br>
+        <br>
+        <img src="img/under-construction.gif" class="pad">
+        <br>
+        <br>
+        <p>coming soon...</p>
+        <p>return some other time</p>
+
+  </div>
+  </div>
+
+</div>
+
+<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+<h3>Hey, are you trying to leave!?</h3>
+<img src="img/home.png" class="icon">
+<a href="https://sketchfab.com/erikkes" target="_blank" class="orange">Sketchfab (WIP)</a>
+<br>
+<br>
+<img src="img/home.png" class="icon">
+<a href="https://www.youtube.com/@erikkesten6079" target="_blank" class="orange">YouTube (erikkes)</a>
+<br>
+<br>
+<img src="img/home.png" class="icon">
+<a href="https://www.youtube.com/@carrikow2726" target="_blank" class="orange">YouTube (carrikow)</a>
+</div>
+
+
+<div class="footer">
+
+  <div class"">
+        <a href="#" class="orange">very secret stash</a>
+  </div>
+
+</div>
+
+<script>
+
+$(document).ready(function() {
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+	$('.popup-with-move-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-slide-bottom'
+	});
+});
+</script>
+
+</body>
+
+</html>
