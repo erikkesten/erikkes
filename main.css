@@ -19,8 +19,10 @@ html{
 body{
   letter-spacing: 0px;
   overflow-x:hidden;
-  background-color: #363b50;
+  background-color: #FFFAE9;
 }
+
+
 
 @keyframes change {
   0%{
@@ -44,7 +46,7 @@ h1{
 
 h2{
   font-family: 'Basteleur';
-  font-size: 20px;
+  font-size: 18px;
   color: #4F221F;
   font-weight: 100;
   margin: 0;
@@ -102,6 +104,8 @@ hr{
   display: flex;
   flex: 1 1 0%;
 
+box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+
 }
 
 .header {
@@ -119,6 +123,8 @@ hr{
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
+
+box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
 
 
@@ -132,6 +138,8 @@ hr{
   padding-bottom: 30px;
   overflow-y: scroll;
   height: 50rem;
+
+box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
 
 .footer {
@@ -150,6 +158,8 @@ hr{
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
+
+box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -6px 0px inset;
 }
 
 .cleanB {
