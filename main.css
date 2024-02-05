@@ -2,13 +2,21 @@
   font-family: 'Basteleur';
   src: local('☺'),
        url('fonts/Basteleur-Bold.woff') format('woff'),
-       url('fonts/Basteleur-Bold.otf') format('opentype'),
+       url('fonts/Basteleur-Bold.otf') format('opentype');
+      font-style: normal;
+}
+
+@font-face {
+  font-family: 'Basteleur-Moonlight';
+  src: local('☺'),
+       url('fonts/Basteleur-Moonlight.ttf') format('truetype');
+       font-style: normal;
 }
 
 @font-face {
   font-family: 'NectoMono';
   src: local('☺'),
-       url('fonts/NectoMono-Regular.otf') format('opentype'),
+       url('fonts/NectoMono-Regular.otf') format('opentype');
 }
 
 html{
@@ -40,14 +48,13 @@ h1{
   font-family: 'Basteleur';
   font-size: 42px;
   margin-top: 0;
-  font-weight: 100;
   color: #4F221F;
 }
 
 h2{
   font-family: 'Basteleur';
   font-size: 18px;
-  color: #4F221F;
+  color: #000000;
   font-weight: 100;
   margin: 0;
   margin-right: auto;
@@ -95,7 +102,7 @@ hr{
   border-style: solid ;
   border-width: 2px;
   border-bottom: 0px;
-  width: 940px;
+  width: 1280px;
   margin: 0 auto;
   background-image:linear-gradient(-15deg, #F66D33, #f5b53a, #1888c6);
   animation: change 10s ease-in-out infinite;
@@ -118,8 +125,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   color: #000;
   border-style: solid;
   border-width: 2px;
-
-  width: 940px;
+  width: 1280px;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -132,12 +138,12 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   background-color: #FFFAE9;
   border-style: none solid solid;
   border-width: 2px;
-  width: 940px;
+  width: 1280px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 30px;
   overflow-y: scroll;
-  height: 50rem;
+  height: 60rem;
 
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
@@ -154,7 +160,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   border-style: none solid solid;
   border-width: 2px;
   border-radius: 0px 0px 10px 10px;
-  width: 940px;
+  width: 1280px;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -218,20 +224,51 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 }
 
 
-.orange{
+
+
+.orange {
   color: #F66D33;
-
-
+  position: relative;
+  text-decoration: none;
+}
+.orange:before, .orange:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #F66D33;
+}
+.orange:before {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+}
+.orange:after {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+}
+.orange:hover:before, .orange:hover:after, .orange:focus:before, .orange:focus:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.orange:hover:before, .orange:focus:before {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+}
+.orange:hover:after, .orange:focus:after {
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 }
 
-.orange:hover{
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-}
+
+
+
 
 .yt {
-  width:560px;
-  height:315px;
+  width:700px;
+  height:394px;
   margin-top: 20px;
 
 }
@@ -315,7 +352,7 @@ ion-icon {
 }
 
 .competence{
-margin-left:0
+margin-left:0;
 }
 
 .competence li{
@@ -327,6 +364,8 @@ margin-left:0
   margin-right:1rem;
   margin-bottom:1.5rem;
   border:2px solid #4F221F;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+
 
 }
 
@@ -336,7 +375,7 @@ margin-left:0
 
 
 
-@media(max-width:960px) {
+@media(max-width:1280px) {
   .header {
     width: 100%;
     gap: 0px;
@@ -354,6 +393,27 @@ margin-left:0
     width: 100%;
   }
 
+}
+
+@media(max-width:1080px) {
+  .yt {
+    width:560px;
+    height:315px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+}
+
+@media(max-width:720px) {
+  .yt {
+    width:460px;
+    height:259px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
 
 @media(max-width:600px) {
