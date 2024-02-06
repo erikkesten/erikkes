@@ -6,17 +6,18 @@
       font-style: normal;
 }
 
-@font-face {
-  font-family: 'Basteleur-Moonlight';
-  src: local('☺'),
-       url('fonts/Basteleur-Moonlight.ttf') format('truetype');
-       font-style: normal;
-}
 
 @font-face {
   font-family: 'NectoMono';
   src: local('☺'),
        url('fonts/NectoMono-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Redaction10';
+  src: local('☺'),
+       url('fonts/Redaction10-italic.otf') format('opentype');
+
 }
 
 html{
@@ -28,6 +29,8 @@ body{
   letter-spacing: 0px;
   overflow-x:hidden;
   background-color: #FFFAE9;
+  margin: 10;
+  overscroll-behaviour:none;
 }
 
 
@@ -44,16 +47,19 @@ body{
   }
 }
 
+
+
+
 h1{
-  font-family: 'Basteleur';
+  font-family: 'Redaction10';
   font-size: 42px;
   margin-top: 0;
   color: #4F221F;
 }
 
 h2{
-  font-family: 'Basteleur';
-  font-size: 18px;
+  font-family: 'Redaction10';
+  font-size: 20px;
   color: #000000;
   font-weight: 100;
   margin: 0;
@@ -64,15 +70,25 @@ h2{
 }
 
 h3{
-  font-family: 'Basteleur';
-  font-size: 32px;
+  font-family: 'Redaction10';
+  font-size: 42px;
   margin-top: 0;
   font-weight: 100;
+  color: #4F221F;
+}
+
+h4{
+  font-family: 'Redaction10';
+  font-size: 120px;
+  margin-top: 0;
+  font-weight: 100;
+  color: #4F221F;
+
 }
 
 a{
-  font-family: 'Basteleur';
-  font-size: 22px;
+  font-family: 'Redaction10';
+  font-size: 32px;
   margin: 0px;
   text-decoration: none;
   color: #4F221F;
@@ -87,7 +103,7 @@ p{
 }
 
 li{
-    font-family: 'Basteleur';
+    font-family: 'Redaction10';
     color: #4F221F;
 }
 
@@ -103,7 +119,7 @@ hr{
   border-width: 2px;
   border-bottom: 0px;
   width: 1280px;
-  margin: 0 auto;
+  margin:0 auto;
   background-image:linear-gradient(-15deg, #F66D33, #f5b53a, #1888c6);
   animation: change 10s ease-in-out infinite;
   background-size: 200% 200%;
@@ -126,7 +142,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   border-style: solid;
   border-width: 2px;
   width: 1280px;
-  margin: 0 auto;
+  margin:0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -139,7 +155,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   border-style: none solid solid;
   border-width: 2px;
   width: 1280px;
-  margin: 0 auto;
+  margin:0 auto;
   padding-top: 40px;
   padding-bottom: 30px;
   overflow-y: scroll;
@@ -161,7 +177,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   border-width: 2px;
   border-radius: 0px 0px 10px 10px;
   width: 1280px;
-  margin: 0 auto;
+  margin:0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -189,7 +205,10 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   width: 940px;
 }
 
-
+.small{
+  max-width: 280px;
+  height: auto;
+}
 
 .right {
   display: flex;
@@ -203,6 +222,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 .center{
   text-align: center;
 }
+
 
 .logo{
   width:60;
@@ -224,6 +244,107 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 }
 
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 10px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  display: block;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+
+}
+
+.gallery__item--4 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.gallery__item--6 {
+  grid-column-start: 3;
+  grid-column-end:5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.gallery__item--7 {
+  grid-column-start: 5;
+  grid-column-end:7;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.gallery__item--8 {
+  grid-column-start: 7;
+  grid-column-end:9;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.gallery__item--9 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
+
+}
+
+.gallery__item--10 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.gallery__item--11 {
+  grid-column-start: 5;
+  grid-column-end:7;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.gallery__item--12 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
 
 
 .orange {
@@ -263,8 +384,19 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 }
 
 
+#pad{
 
+  padding-left: 100px;
+  padding-right: 100px;
+}
 
+.right{
+  float: right;
+}
+
+.text-left{
+  text-align: left;
+}
 
 .yt {
   width:700px;
@@ -279,9 +411,10 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   padding-left: 100px;
   padding-bottom: 20px;
   font-weight: 600;
-  font-size: 28px;
-  font-family: 'Basteleur';
+  font-size: 112px;
+  font-family: 'Redaction10';
   font-weight: 100;
+  color: #4F221F;
 }
 
 .txt{
@@ -315,7 +448,7 @@ ion-icon {
 }
 
 .navbar {
-    margin-top: -5px;
+    margin-top: 0px;
 }
 
 .link{
@@ -353,6 +486,10 @@ ion-icon {
 
 .competence{
 margin-left:0;
+margin-left: auto;
+margin-right: auto;
+width: 60%;
+
 }
 
 .competence li{
@@ -365,6 +502,7 @@ margin-left:0;
   margin-bottom:1.5rem;
   border:2px solid #4F221F;
   box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  font-size: 20px;
 
 
 }
@@ -404,6 +542,10 @@ margin-left:0;
     margin-left: 20px;
   }
 
+  .txtL{
+    font-size: 80px;
+  }
+
 }
 
 @media(max-width:720px) {
@@ -418,14 +560,16 @@ margin-left:0;
 
 @media(max-width:600px) {
   a{
-    font-size: 18px;
+    font-size: 26px;
   }
 
-  .icon{
-    width:20;
-    height:20;
-    margin-top: 4px;
-    margin-left: 20px;
+  h1{
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+
+  .navbar {
+      margin-top: -4px;
   }
 
   .logo{
@@ -446,6 +590,7 @@ margin-left:0;
     padding-right: 45px;
     padding-left: 45px;
     padding-bottom: 20px;
+    font-size: 60px;
   }
 
   .txt{
@@ -658,4 +803,56 @@ uncomment this part if you haven't added this code anywhere else
 /* animate out */
 .my-mfp-slide-bottom.mfp-removing.mfp-bg {
 	opacity: 0;
+}
+
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.column img {
+  margin-top: 14px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 960px) {
+  .column {
+    -ms-flex: 47%;
+    flex: 47%;
+    max-width: 47%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
