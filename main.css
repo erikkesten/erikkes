@@ -17,11 +17,16 @@
   font-family: 'Redaction10';
   src: local('☺'),
        url('fonts/Redaction10-Italic.otf') format('opentype');
+}
 
+@font-face {
+  font-family: 'Redaction10-Bold';
+  src: local('☺'),
+       url('fonts/Redaction10-Bold.otf') format('opentype');
 }
 
 html{
-  scrollbar-color: #F66D33#FFFAE9;
+  scrollbar-color: #F66D33#eae0be;
 }
 
 
@@ -159,6 +164,8 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   padding-top: 40px;
   padding-bottom: 30px;
   overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-padding: 40px;
   height: 60rem;
 
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
@@ -399,9 +406,9 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 }
 
 .yt {
-  width:700px;
+  width:40%;
   height:394px;
-  margin-top: 20px;
+  margin: 10px;
 
 }
 
@@ -503,8 +510,31 @@ width: 60%;
   border:2px solid #4F221F;
   box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
   font-size: 20px;
+}
 
+.button{
+margin-left:0;
+margin-left: auto;
+margin-right: auto;
+width: 60%;
 
+}
+
+.button li{
+  list-style-type:none;
+  display:inline-block;
+}
+
+.button a{
+  background-color: white;
+  padding:.6rem 1rem;
+  border-radius:100px;
+  margin-right:1rem;
+  margin-bottom:1.5rem;
+  border:2px solid #4F221F;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  font-size: 20px;
+  color: #F66D33;
 }
 
 .underline{
@@ -821,6 +851,8 @@ uncomment this part if you haven't added this code anywhere else
   padding: 0 20px;
 }
 
+
+
 /* Create four equal columns that sits next to each other */
 .column {
   -ms-flex: 30%; /* IE10 */
@@ -837,6 +869,12 @@ uncomment this part if you haven't added this code anywhere else
   margin-top: 14px;
   vertical-align: middle;
   width: 100%;
+}
+
+.column iframe {
+  margin-top: 14px;
+  width: 560px;
+  height: 300px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
