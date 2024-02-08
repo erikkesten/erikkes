@@ -34,7 +34,7 @@ body{
   letter-spacing: 0px;
   overflow-x:hidden;
   background-color: #FFFAE9;
-  margin: 10;
+  margin: 0.5rem;
   overscroll-behaviour:none;
 }
 
@@ -166,7 +166,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-padding: 40px;
-  height: 60rem;
+  height: 59rem;
 
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
@@ -577,6 +577,25 @@ padding-left: 10px;
 .association a{
   margin-right:1rem;
   margin-left:1rem;
+}
+
+.contact-me{
+margin-left:0;
+padding: 0;
+padding-right: 10px;
+padding-left: 10px;
+
+}
+
+.contact-me li{
+  list-style-type:none;
+  display:inline-block;
+  padding: 0;
+
+}
+
+.contact-me a{
+  padding: 0;
 }
 
 .underline{
