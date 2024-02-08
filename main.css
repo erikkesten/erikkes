@@ -451,7 +451,6 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 ion-icon {
   color: #F66D33;
   padding-right: 10px;
-  padding-left: 30px;
 }
 
 .navbar {
@@ -493,10 +492,9 @@ ion-icon {
 
 .competence{
 margin-left:0;
-margin-left: auto;
-margin-right: auto;
-width: 60%;
-
+padding: 0;
+padding-right: 10px;
+padding-left: 10px;
 }
 
 .competence li{
@@ -505,7 +503,8 @@ width: 60%;
   background-color: white;
   padding:.6rem 1rem;
   border-radius:6px;
-  margin-right:1rem;
+  margin-right:0.5rem;
+  margin-left:0.5rem;
   margin-bottom:1.5rem;
   border:2px solid #4F221F;
   box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
@@ -514,27 +513,49 @@ width: 60%;
 
 .button{
 margin-left:0;
-margin-left: auto;
-margin-right: auto;
-width: 60%;
+padding: 0;
+padding-right: 10px;
+padding-left: 10px;
 
 }
 
 .button li{
   list-style-type:none;
   display:inline-block;
+  padding:.6rem 0rem;
+  margin-bottom:1.5rem;
 }
 
 .button a{
   background-color: white;
   padding:.6rem 1rem;
   border-radius:100px;
-  margin-right:1rem;
+  margin-right:0.5rem;
+  margin-left:0.5rem;
   margin-bottom:1.5rem;
   border:2px solid #4F221F;
   box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
   font-size: 20px;
   color: #F66D33;
+}
+
+.nav{
+margin-left:0;
+padding: 0;
+padding-right: 10px;
+padding-left: 10px;
+
+}
+
+.nav li{
+  list-style-type:none;
+  display:inline-block;
+  padding: 0;
+
+}
+
+.nav a{
+  margin-left:2rem;
 }
 
 .underline{
@@ -599,7 +620,7 @@ width: 60%;
   }
 
   .navbar {
-      margin-top: -4px;
+      margin-top: 14px;
   }
 
   .logo{
