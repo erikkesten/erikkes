@@ -115,7 +115,6 @@ li{
 hr{
   border: 1px dashed #4F221F;
   width: 70%;
-
 }
 
 .topbar {
@@ -558,6 +557,10 @@ padding-left: 10px;
   margin-left:2rem;
 }
 
+.nav i{
+  margin-right:0.5rem;
+}
+
 
 .association{
 margin-left:0;
@@ -571,12 +574,16 @@ padding-left: 10px;
   list-style-type:none;
   display:inline-block;
   padding: 0;
-
+  margin-top: 0.5rem;
 }
 
 .association a{
   margin-right:1rem;
   margin-left:1rem;
+}
+
+.association i{
+  margin-right:0.5rem;
 }
 
 .contact-me{
@@ -596,11 +603,14 @@ padding-left: 10px;
 
 .contact-me a{
   padding: 0;
+  font-size: 26px;
 }
 
-.underline{
-
+.contact-me i{
+  margin-right:0.25rem;
 }
+
+
 
 
 
