@@ -263,94 +263,6 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   display: block;
 }
 
-.gallery__item--1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.gallery__item--2 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.gallery__item--3 {
-  grid-column-start: 5;
-  grid-column-end: 7;
-  grid-row-start: 1;
-  grid-row-end: 3;
-
-
-}
-
-.gallery__item--4 {
-  grid-column-start: 7;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 3;
-
-}
-
-.gallery__item--5 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.gallery__item--6 {
-  grid-column-start: 3;
-  grid-column-end:5;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.gallery__item--7 {
-  grid-column-start: 5;
-  grid-column-end:7;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.gallery__item--8 {
-  grid-column-start: 7;
-  grid-column-end:9;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.gallery__item--9 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 5;
-  grid-row-end: 7;
-
-}
-
-.gallery__item--10 {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 5;
-  grid-row-end: 7;
-}
-
-.gallery__item--11 {
-  grid-column-start: 5;
-  grid-column-end:7;
-  grid-row-start: 5;
-  grid-row-end: 7;
-}
-
-.gallery__item--12 {
-  grid-column-start: 7;
-  grid-column-end: 9;
-  grid-row-start: 5;
-  grid-row-end: 7;
-}
-
 
 .orange {
   color: #F66D33;
@@ -723,6 +635,11 @@ padding-left: 10px;
   /* padding-bottom and top for image */
 .mfp-no-margins img.mfp-img {
 	padding: 0;
+  max-width: 60%;
+  max-height: 60%;
+  display: flex;
+
+
 }
 /* position of shadow behind the image */
 .mfp-no-margins .mfp-figure:after {
@@ -771,10 +688,8 @@ uncomment this part if you haven't added this code anywhere else
 /* Styles for dialog window */
 #small-dialog {
 	padding: 40px 50px;
-	text-align: left;
 	max-width: 600px;
-	margin: 40px auto;
-	position: relative;
+  position: absolute;
   background-color: #FFFAE9;
   border-radius: 10px;
   border-style: solid;
