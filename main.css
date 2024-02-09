@@ -27,13 +27,16 @@
 
 html{
   scrollbar-color: #F66D33#eae0be;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-padding: 40px;
 }
 
 
 body{
   letter-spacing: 0px;
   overflow-x:hidden;
-  background-color: #FFFAE9;
+  background-color: #eae0be;
   margin: 0.5rem;
   overscroll-behaviour:none;
 }
@@ -131,7 +134,7 @@ hr{
   display: flex;
   flex: 1 1 0%;
 
-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset, rgba(255, 255, 255, 0.3) 0px 4px 0px inset;
 
 }
 
@@ -147,8 +150,8 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   border-width: 2px;
   width: 1280px;
   margin:0 auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
@@ -162,10 +165,6 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   margin:0 auto;
   padding-top: 40px;
   padding-bottom: 30px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-padding: 40px;
-  height: 59rem;
 
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
@@ -184,8 +183,8 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   border-radius: 0px 0px 10px 10px;
   width: 1280px;
   margin:0 auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -6px 0px inset;
 }
@@ -413,8 +412,8 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 .txtL{
   text-align: left;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 70px;
+  padding-left: 70px;
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 112px;
@@ -425,8 +424,8 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 .txt{
   text-align: left;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 70px;
+  padding-left: 70px;
   padding-bottom: 20px;
 }
 
@@ -771,7 +770,6 @@ uncomment this part if you haven't added this code anywhere else
 
 /* Styles for dialog window */
 #small-dialog {
-	background: white;
 	padding: 40px 50px;
 	text-align: left;
 	max-width: 600px;
@@ -781,6 +779,7 @@ uncomment this part if you haven't added this code anywhere else
   border-radius: 10px;
   border-style: solid;
   border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
 
 
