@@ -55,9 +55,6 @@ body{
   }
 }
 
-
-
-
 h1{
   font-family: 'Redaction10';
   font-size: 42px;
@@ -133,7 +130,7 @@ hr{
   align-items: center;
   display: flex;
   flex: 1 1 0%;
-
+  overflow-x: hidden;
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset, rgba(255, 255, 255, 0.3) 0px 4px 0px inset;
 
 }
@@ -165,6 +162,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   margin:0 auto;
   padding-top: 40px;
   padding-bottom: 30px;
+
 
 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
@@ -326,7 +324,6 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   text-align: left;
   padding-right: 70px;
   padding-left: 70px;
-  padding-bottom: 20px;
   font-weight: 600;
   font-size: 112px;
   font-family: 'Redaction10';
@@ -449,6 +446,35 @@ padding-left: 10px;
   color: #F66D33;
 }
 
+.front-nav{
+margin-left:0;
+padding: 0;
+padding-right: 10px;
+padding-left: 60px;
+
+}
+
+.front-nav li{
+  list-style-type:none;
+  display:inline-block;
+  padding:.6rem 0rem;
+  margin-bottom:1.5rem;
+}
+
+.front-nav a{
+  background-color: white;
+  padding:.6rem 1rem;
+  border-radius:100px;
+  margin-right:0.5rem;
+  margin-left:0.5rem;
+  margin-bottom:1.5rem;
+  border:2px solid #4F221F;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  font-size: 20px;
+  color: #F66D33;
+}
+
+
 .nav{
 margin-left:0;
 padding: 0;
@@ -514,7 +540,7 @@ padding-left: 10px;
 
 .contact-me a{
   padding: 0;
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .contact-me i{
@@ -523,24 +549,22 @@ padding-left: 10px;
 
 
 
-
-
 @media(max-width:1280px) {
   .header {
-    width: 100%;
+    width: 99%;
     gap: 0px;
 
   }
   .main {
-    width: 100%;
+    width: 99%;
 
   }
   .footer {
-    width: 100%;
+    width: 99%;
 
   }
   .topbar{
-    width: 100%;
+    width: 99%;
   }
 
 }
@@ -555,7 +579,7 @@ padding-left: 10px;
   }
 
   .txtL{
-    font-size: 80px;
+    font-size: 96px;
   }
 
 }
@@ -568,16 +592,31 @@ padding-left: 10px;
     margin-right: 20px;
     margin-left: 20px;
   }
+  .txtL{
+    padding-bottom: 10px;
+    font-size: 76px;
+  }
+
+  .front-nav{
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
 }
+
 
 @media(max-width:600px) {
   a{
-    font-size: 26px;
+    font-size: 24px;
   }
 
   h1{
     font-size: 32px;
     padding-bottom: 20px;
+  }
+
+  p{
+      font-size: 16px;
   }
 
   .navbar {
@@ -599,10 +638,11 @@ padding-left: 10px;
   }
 
   .txtL{
-    padding-right: 45px;
-    padding-left: 45px;
-    padding-bottom: 20px;
-    font-size: 60px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    font-size: 64px;
+    text-align: center;
   }
 
   .txt{
