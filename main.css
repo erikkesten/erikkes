@@ -234,7 +234,33 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   margin-left: 30px;
   display: flex;
   justify-content: flex-end;
+}
 
+.logo{
+  width:60;
+  height:60;
+  margin-bottom: 0px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px red solid;
+}
+.image2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 1px green solid;
 }
 
 .icon{
@@ -675,8 +701,8 @@ padding-left: 10px;
   /* padding-bottom and top for image */
 .mfp-no-margins img.mfp-img {
 	padding: 0;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 100%;
+  max-height: 100%;
   display: flex;
 
 
@@ -918,4 +944,18 @@ uncomment this part if you haven't added this code anywhere else
     flex: 100%;
     max-width: 100%;
   }
+}
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
 }
