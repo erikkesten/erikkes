@@ -36,7 +36,8 @@ html{
 body{
   letter-spacing: 0px;
   overflow-x:hidden;
-  background-color: #eae0be;
+  background: rgb(212,197,146);
+  background: linear-gradient(0deg, rgba(212,197,146,1) 0%, rgba(234,224,190,1) 35%);
   margin: 0.5rem;
   overscroll-behaviour:none;
 }
@@ -992,21 +993,21 @@ uncomment this part if you haven't added this code anywhere else
 
 .slider-nav{
   display: flex;
-  column-gap: 1rem;
-  position: absolute;
-  top: 2.25rem;
-  right: 0.25rem;
-  transform: translateX(-50%);
-  z-index: 1;
+  column-gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem
+
 }
 
 .slider-nav a{
-  width: 1rem;
+  width: 5rem;
   height: 1rem;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.75;
-  transition: opacity ease 250ms;
+  border-radius: 10px;
+  background-color: white;
+  border:2px solid #4F221F;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  font-size: 20px;
+  color: #F66D33;
 }
 
 .slider-nav a:hover{
