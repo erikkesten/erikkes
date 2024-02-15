@@ -58,7 +58,7 @@ body{
 
 h1{
   font-family: 'Redaction10';
-  font-size: 42px;
+  font-size: 62px;
   margin-top: 0;
   color: #4F221F;
 }
@@ -473,7 +473,7 @@ padding-left: 10px;
   color: #F66D33;
 }
 
-.front-nav{
+.top-nav{
 margin-left:0;
 padding: 0;
 padding-right: 10px;
@@ -481,14 +481,17 @@ padding-left: 60px;
 
 }
 
-.front-nav li{
+.top-nav li{
   list-style-type:none;
   display:inline-block;
   padding:.6rem 0rem;
   margin-bottom:1.5rem;
 }
 
-.front-nav a{
+
+
+/*
+.top-nav a{
   background-color: white;
   padding:.6rem 1rem;
   border-radius:100px;
@@ -500,7 +503,7 @@ padding-left: 60px;
   font-size: 20px;
   color: #F66D33;
 }
-
+*/
 
 .nav{
 margin-left:0;
@@ -624,11 +627,12 @@ padding-left: 10px;
     font-size: 76px;
   }
 
-  .front-nav{
+  .top-nav{
     padding-right: 10px;
     padding-left: 10px;
     text-align: center;
   }
+
 }
 
 
@@ -999,6 +1003,8 @@ uncomment this part if you haven't added this code anywhere else
 
 }
 
+
+/*
 .slider-nav a{
   width: 5rem;
   height: 1rem;
@@ -1012,4 +1018,39 @@ uncomment this part if you haven't added this code anywhere else
 
 .slider-nav a:hover{
   opacity: 1;
+}
+*/
+
+
+.comic-button {
+  font-family: 'Redaction10';
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 30px;
+  text-align: center;
+  color: #F66D33;
+  background-color: #fff;
+  border:2px solid #4F221F;
+  border-radius: 100px;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset, 0px 5px 0px #4F221F;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-right:0.5rem;
+  margin-left:0.5rem;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #F66D33;
+  border: 2px solid #4F221F;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset, 0px 8px 0px #4F221F;
+  transform: translateY(-3px);
+
+}
+
+.comic-button:active {
+  background-color: #f0f0f0;
+  box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset, 0px 0px 0px #4F221F;
+  transform: translateY(4px);
 }
