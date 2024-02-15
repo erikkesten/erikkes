@@ -974,7 +974,7 @@ uncomment this part if you haven't added this code anywhere else
 
 .slider-wrapper{
   position: relative;
-  max-width: 60rem;
+  max-width: 99%;
   margin: 0 auto;
 }
 
