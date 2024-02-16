@@ -69,21 +69,19 @@ home
 </div>
 
 
-<section class="cont">
-  <div class="slider-wrapper">
-    <div class="slider">
-      <img id="slide-1" src="img/work/chubu.jpg" alt="Chubu Records"/>
-      <img id="slide-2" src="img/photos/field.jpg" alt="Summer field"/>
-      <img id="slide-3" src="img/photos/tree.jpg" alt="Tree"/>
-    </div>
-    <div class="slider-nav">
-        <button onclick="location.href='#slide-1'" type="button" class="comic-button"></button>
-        <button onclick="location.href='#slide-2'" type="button" class="comic-button"></button>
-        <button onclick="location.href='#slide-3'" type="button" class="comic-button"></button>
-    </div>
+<div class="slider-container">
+  <div class="slider-images">
+  <img class="slider-image" src="img/work/chubu.jpg" alt="Image 1">
+  <img class="slider-image" src="img/photos/field.jpg" alt="Image 2">
+  <img class="slider-image" src="img/photos/tree.jpg" alt="Image 3">
   </div>
-</section>
-
+  <!-- Arrow buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<br>
+<br>
 
 <div class="">
 
@@ -266,6 +264,24 @@ $(document).ready(function() {
 		mainClass: 'my-mfp-slide-bottom'
 	});
 });
+</script>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slider-image");
+    if (slideIndex >= slides.length) {slideIndex = 0}
+    if (slideIndex < 0) {slideIndex = slides.length - 1}
+    var newPosition = -slideIndex * 100;
+    document.querySelector('.slider-images').style.transform = `translateX(${newPosition}%)`;
+  }
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

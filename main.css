@@ -1054,3 +1054,68 @@ uncomment this part if you haven't added this code anywhere else
   box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset, 0px 0px 0px #4F221F;
   transform: translateY(4px);
 }
+
+
+
+
+
+
+/* CSS for the slider container */
+  .slider-container {
+    position: relative;
+    width: 96%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  /* CSS for the slider images */
+  .slider-images {
+    display: flex;
+    transition: transform 0.5s ease; /* Simple animation when scrolling to the next image */
+  }
+
+  .slider-image {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* CSS for arrow buttons */
+  .prev, .next {
+    position: absolute;
+    top: 48%;
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    margin-left: 0.5rem;
+
+    border-radius: 100px;
+    color: #F66D33;
+    background-color: #fff;
+    border:2px solid #4F221F;
+    box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+  }
+
+  .next {
+    right: 0.5rem;
+    border-radius: 100px;
+    color: #F66D33;
+    background-color: #fff;
+    border:2px solid #4F221F;
+    box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+  }
+
+  /* CSS for hover effect on arrow buttons */
+  .prev:hover, .next:hover {
+    background-color: #fff;
+    border-radius: 100px;
+    color: #F66D33;
+    border: 2px solid #4F221F;
+    box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+    transform: translateY(-3px);
+  }
