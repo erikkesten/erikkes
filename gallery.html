@@ -93,24 +93,22 @@ gallery
 <br>
 <br>
 
-<section class="cont">
+
   <p class="center">User interface for city-building game.</p>
   <br>
-  <div class="slider-wrapper">
-    <div class="slider">
-      <img id="slide-1" src="img/work/interface/build.jpg" alt="Summer field"/>
-      <img id="slide-2" src="img/work/interface/production.jpg" alt="Summer field"/>
-      <img id="slide-3" src="img/work/interface/emissions.jpg" alt="Summer field"/>
-      <img id="slide-4" src="img/work/interface/market.jpg" alt="Summer field"/>
+
+  <div class="slider-container">
+    <div class="slider-images">
+    <img class="slider-image" src="img/work/interface/build.jpg" alt="Image 1">
+    <img class="slider-image" src="img/work/interface/production.jpg" alt="Image 2">
+    <img class="slider-image" src="img/work/interface/emissions.jpg" alt="Image 3">
+    <img class="slider-image" src="img/work/interface/market.jpg" alt="Image 4">
     </div>
-    <div class="slider-nav">
-        <button onclick="location.href='#slide-1'" type="button" class="comic-button"></button>
-        <button onclick="location.href='#slide-2'" type="button" class="comic-button"></button>
-        <button onclick="location.href='#slide-3'" type="button" class="comic-button"></button>
-        <button onclick="location.href='#slide-4'" type="button" class="comic-button"></button>
-    </div>
+    <!-- Arrow buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-</section>
+
 </div>
 
 <br>
@@ -124,16 +122,16 @@ gallery
   <h1 class="center">Photos</h1>
 <div class="row">
   <div class="column">
-    <a class="image-popup-no-margins" href="img/photos/boys.jpg">
-      <img src="img/photos/boys.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/field2.jpg">
+      <img src="img/photos/field2.jpg" style="width:100%">
     </a>
 
-    <a class="image-popup-no-margins" href="img/photos/football.jpg">
-      <img src="img/photos/football.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/tree.jpg">
+      <img src="img/photos/tree.jpg" style="width:100%">
     </a>
 
-    <a class="image-popup-no-margins" href="img/photos/leaf.jpg">
-      <img src="img/photos/leaf.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/house.jpg">
+      <img src="img/photos/house.jpg" style="width:100%">
     </a>
 
     <a class="image-popup-no-margins" href="img/photos/city.jpg">
@@ -145,29 +143,29 @@ gallery
       <img src="img/photos/field.jpg" style="width:100%">
     </a>
 
-    <a class="image-popup-no-margins" href="img/photos/cow.jpg">
-      <img src="img/photos/cow.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/leaf.jpg">
+      <img src="img/photos/leaf.jpg" style="width:100%">
     </a>
 
-    <a class="image-popup-no-margins" href="img/photos/tree.jpg">
-      <img src="img/photos/tree.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/football.jpg">
+      <img src="img/photos/football.jpg" style="width:100%">
     </a>
 
-    <a class="image-popup-no-margins" href="img/photos/house.jpg">
-      <img src="img/photos/house.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/hallway.jpg">
+      <img src="img/photos/hallway.jpg" style="width:100%">
     </a>
   </div>
   <div class="column">
-    <a class="image-popup-no-margins" href="img/photos/hallway.jpg">
-      <img src="img/photos/hallway.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/cow.jpg">
+      <img src="img/photos/cow.jpg" style="width:100%">
     </a>
 
     <a class="image-popup-no-margins" href="img/photos/waterfall.jpg">
       <img src="img/photos/waterfall.jpg" style="width:100%">
     </a>
 
-    <a class="image-popup-no-margins" href="img/photos/field2.jpg">
-      <img src="img/photos/field2.jpg" style="width:100%">
+    <a class="image-popup-no-margins" href="img/photos/boys.jpg">
+      <img src="img/photos/boys.jpg" style="width:100%">
     </a>
 
     <a class="image-popup-no-margins" href="img/photos/sign.jpg">
@@ -332,6 +330,24 @@ $(document).ready(function() {
 		mainClass: 'my-mfp-slide-bottom'
 	});
 });
+</script>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slider-image");
+    if (slideIndex >= slides.length) {slideIndex = 0}
+    if (slideIndex < 0) {slideIndex = slides.length - 1}
+    var newPosition = -slideIndex * 100;
+    document.querySelector('.slider-images').style.transform = `translateX(${newPosition}%)`;
+  }
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
