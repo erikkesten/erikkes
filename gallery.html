@@ -3,7 +3,7 @@
 <head>
 
 <title>
-gallery
+erikkes - Gallery
 </title>
 
 <meta charset="utf-8">
@@ -22,6 +22,23 @@ gallery
 
 <script src="https://kit.fontawesome.com/fe1a8cf981.js" crossorigin="anonymous"></script>
 
+<link rel="icon" type="image/svg" href="icons/logo-w.svg" id="favicon">
+
+<script>
+    window.onload = function() {
+        var userAgent = navigator.userAgent.toLowerCase();
+        var favicon = document.getElementById('favicon');
+
+        // Detect if the user is using a specific search engine
+        if (userAgent.includes("google")) {
+            // Change favicon to black
+            favicon.href = "logo-b.svg";
+        } else {
+            // Default to white favicon
+            favicon.href = "logo-w.svg";
+        }
+    };
+</script>
 
 </head>
 
