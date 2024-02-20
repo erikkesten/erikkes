@@ -1063,7 +1063,7 @@ uncomment this part if you haven't added this code anywhere else
 /* CSS for the slider container */
   .slider-container {
     position: relative;
-    width: 96%;
+    width: 95%;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
