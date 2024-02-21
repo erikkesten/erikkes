@@ -1207,6 +1207,8 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:1rem;
   border:0.1rem solid var(--button);
   display: flex;
+  cursor: pointer;
+
 }
 
 .grid-item img {
@@ -1221,8 +1223,72 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:0rem 1rem 0rem 1rem;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
   color: white;
-  padding: 1rem 3rem;
+  padding: 1rem 0rem;
   font-size: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.dark-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.4));
+}
+
+.dark-overlay p{
+  color: var(--backdrop);
+  font-size: 0,875rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  text-align: left;
+    font-size: 18px;
+
+}
+
+.overlay-button {
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: var(--backdrop);
+  list-style-type:none;
+  display:inline-block;
+  letter-spacing: -.025em;
+  padding:.6rem 1rem;
+  border-radius:0.5rem;
+  margin-right:0.5rem;
+  margin-left:-1rem;
+  border:0.1rem solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0,0,0,0.4);
+  font-size: 18px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+
+}
+.overlay-circle {
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: var(--backdrop);
+
+  padding:.5rem 1rem;
+  border-radius:10rem;
+  border:0.1rem solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0,0,0,0.4);
+  font-size: 18px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+
+}
+
+
+.overlay-button:hover {
+
+}
+
+.overlay-button:active {
+
+}
+
+.dark-overlay .tools{
+  margin-right: 27rem;
 }

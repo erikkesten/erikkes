@@ -149,28 +149,52 @@ erikkes - Home
 
 
 <div class="grid-container">
-  <div class="grid-item">
+  <div class="grid-item" onclick="window.open('https://www.behance.net/gallery/191980227/Prototype-for-Record-Label-website' + location.search)">
 
     <img src="img/work/chubu.jpg" alt="Image 1">
-    <div class="text-overlay">Prototype for Record Label website</div>
+    <div class="dark-overlay">
+    <p>Prototype website for a Record Label</p>
+    <ul class="tools">
+      <li><button onclick="location.href='#'" type="button" class="overlay-button">View more</button></li>
+      <li><button onclick="location.href='#'" type="button" class="overlay-circle">&#10095;</button></li>
+    </ul>
+    </div>
 
   </div>
   <div class="grid-item">
 
-    <img src="img/work/skinbid-show.png" alt="Image 2">
-    <div class="text-overlay">SkinBid logo concept</div>
+    <img src="img/work/skinbid-show.png" alt="Image 1">
+    <div class="dark-overlay">
+    <p>Logo concept for SkinBid</p>
+    <ul class="tools">
+      <li><button onclick="location.href='#'" type="button" class="overlay-button">View more</button></li>
+      <li><button onclick="location.href='#'" type="button" class="overlay-circle">&#10095;</button></li>
+    </ul>
+    </div>
 
   </div>
   <div class="grid-item">
 
-    <img src="img/work/MONO-tag.png" alt="Image 3">
-    <div class="text-overlay">Text 3</div>
+    <img src="img/work/MONO-tag.png" alt="Image 1">
+    <div class="dark-overlay">
+    <p>Logo suggestion for Réaimer</p>
+    <ul class="tools">
+      <li><button onclick="location.href='#'" type="button" class="overlay-button">View more</button></li>
+      <li><button onclick="location.href='#'" type="button" class="overlay-circle">&#10095;</button></li>
+    </ul>
+    </div>
 
   </div>
   <div class="grid-item">
 
-    <img src="img/logos/monogram.png" alt="Image 4">
-    <div class="text-overlay">Text 4</div>
+    <img src="img/photos/boys.jpg" alt="Image 1">
+    <div class="dark-overlay">
+    <p>Hobby photographer</p>
+    <ul class="tools">
+      <li><button onclick="location.href='#'" type="button" class="overlay-button">View more</button></li>
+      <li><button onclick="location.href='#'" type="button" class="overlay-circle">&#10095;</button></li>
+    </ul>
+    </div>
 
   </div>
 </div>
@@ -287,7 +311,9 @@ $(document).ready(function() {
   VanillaTilt.init(document.querySelectorAll(".grid-item"), {
   max: 4,
   speed: 600,
-  reverse: true
+  reverse: true,
+  glare: true,
+  "max-glare": 0.3,
   });
 </script>
 
