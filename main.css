@@ -25,8 +25,28 @@
        url('fonts/Redaction10-Bold.otf') format('opentype');
 }
 
+
+.schibsted-grotesk-<uniquifier> {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+:root {
+  --marin: #2a4073;
+  --button: #0f2350;
+  --title: #0f2350;
+  --background: #fdfbf4;
+  --backdrop: #fbfaf5;
+  --border:#17184b;
+  --text: #0d0015;
+  --tool: #f7fcfe ;
+}
+
 html{
-  scrollbar-color: #F66D33#eae0be;
+  scrollbar-color: var(--marin) var(--backdrop);
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-padding: 10rem;
@@ -36,10 +56,15 @@ html{
 body{
   letter-spacing: 0px;
   overflow-x:hidden;
+  /*
   background: rgb(212,197,146);
   background: linear-gradient(0deg, rgba(212,197,146,1) 0%, rgba(234,224,190,1) 35%);
+  */
   margin: 0.5rem;
   overscroll-behaviour:none;
+  font-size: .875rem;
+  line-height: 1.4;
+}
 }
 
 
@@ -56,23 +81,40 @@ body{
   }
 }
 
+.hero-heading {
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: var(--title);
+  font-variation-settings: "wght"625;
+  letter-spacing: -.025em;
+  margin:5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+}
+
 h1{
-  font-family: 'Redaction10';
+  font-family: "Schibsted Grotesk", sans-serif;
   font-size: 62px;
   margin-top: 0;
-  color: #4F221F;
+  color: var(--title);
+  letter-spacing: -.025em;
 }
 
 h2{
-  font-family: 'Redaction10';
+  font-family: "Schibsted Grotesk", sans-serif;
   font-size: 20px;
-  color: #000000;
+  color: var(--background);
   font-weight: 100;
   margin: 0;
   margin-right: auto;
   margin-left: 30px;
   margin-top: 10px;
   margin-bottom: 7px;
+  letter-spacing: -.025em;
+  font-variation-settings: "wght"625;
 }
 
 h3{
@@ -80,7 +122,7 @@ h3{
   font-size: 42px;
   margin-top: 0;
   font-weight: 100;
-  color: #4F221F;
+  color: var(--marin);
 }
 
 h4{
@@ -88,51 +130,58 @@ h4{
   font-size: 120px;
   margin-top: 0;
   font-weight: 100;
-  color: #4F221F;
+  color: var(--marin);
 
 }
 
 a{
-  font-family: 'Redaction10';
+  font-family: "Schibsted Grotesk", sans-serif;
   font-size: 32px;
   margin: 0px;
   text-decoration: none;
-  color: #4F221F;
+  font-variation-settings: "wght"625;
+  letter-spacing: -.025em;
 
 }
 
 p{
-  font-family: 'NectoMono';
-  font-size: 18px;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 1rem;
   margin: 0px;
-  color: #4F221F;
+  color: var(--text);
+  line-height: 1.4;
+  letter-spacing: -.025em;
 }
 
 li{
     font-family: 'Redaction10';
-    color: #4F221F;
+    color: var(--marin);
 }
 
 hr{
-  border: 1px dashed #4F221F;
+  border: 1px dashed var(--text);
   width: 70%;
 }
 
 .topbar {
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 1em 1em 0em 0em;
   border-style: solid ;
-  border-width: 2px;
+  border-width: 0.1em;
   border-bottom: 0px;
-  width: 1280px;
+  width: 70%;
   margin:0 auto;
+
+  /*
   background-image:linear-gradient(-15deg, #F66D33, #f5b53a, #1888c6);
   animation: change 10s ease-in-out infinite;
   background-size: 200% 200%;
+  */
+  background-color: var(--marin);
   align-items: center;
   display: flex;
   flex: 1 1 0%;
   overflow-x: hidden;
-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset, rgba(255, 255, 255, 0.3) 0px 4px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.15) 0em -0.3em 0em inset, rgba(61, 87, 145, 1) 0em 0.3em 0em inset;
 
 }
 
@@ -142,30 +191,30 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: #FFFAE9;
+  background-color: var(--background);
   color: #000;
   border-style: solid;
-  border-width: 2px;
-  width: 1280px;
+  border-width: 0.1em;
+  border-color: var(--text);
+  width: 70%;
   margin:0 auto;
   padding-top: 16px;
   padding-bottom: 16px;
-
-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
 }
 
 
 .main {
-  background-color: #FFFAE9;
+  background-color: var(--background);
   border-style: none solid solid;
-  border-width: 2px;
-  width: 1280px;
+  border-width: 0.1em;
+  width: 70%;
   margin:0 auto;
   padding-top: 40px;
   padding-bottom: 30px;
+  border-color: var(--text);
 
-
-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
 }
 
 .footer {
@@ -174,40 +223,21 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: #FFFAE9;
+  background-color: var(--background);
   color: #000;
   gap: 50px;
   border-style: none solid solid;
-  border-width: 2px;
-  border-radius: 0px 0px 10px 10px;
-  width: 1280px;
+  border-width: 0.1em;
+  border-radius: 0em 0em 1em 1em;
+  border-color: var(--text);
+  width: 70%;
   margin:0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
 
-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -6px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
 }
 
-.cleanB {
-  display: flex;
-  flex: 1 1 0%;
-
-  justify-content: center;
-  background-color: #f9f8ea;
-
-  border-style: none solid solid;
-  border-width: 1px;
-  width: 940px;
-  margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 30px;
-
-  background-image:linear-gradient(-15deg, #F66D33, #f5b53a, #1888c6);
-  animation: change 10s ease-in-out infinite;
-  background-size: 200% 200%;
-
-  width: 940px;
-}
 
 .small{
   max-width: 280px;
@@ -290,7 +320,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 
 .orange {
-  color: #F66D33;
+  color: var(--marin);
   position: relative;
   text-decoration: none;
 }
@@ -302,7 +332,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   right: 0;
   height: 3px;
   border-radius: 1.5px;
-  background-color: #F66D33;
+  background-color: var(--marin);
 }
 .orange:before {
   opacity: 0;
@@ -355,7 +385,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   font-size: 112px;
   font-family: 'Redaction10';
   font-weight: 100;
-  color: #4F221F;
+  color: var(--button);
 }
 
 .txt{
@@ -436,12 +466,12 @@ padding-left: 10px;
   display:inline-block;
   background-color: white;
   padding:.6rem 1rem;
-  border-radius:6px;
+  border-radius:0.5rem;
   margin-right:0.5rem;
   margin-left:0.5rem;
   margin-bottom:1.5rem;
-  border:2px solid #4F221F;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  border:0.1rem solid var(--text);
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
   font-size: 20px;
 }
 
@@ -467,8 +497,8 @@ padding-left: 10px;
   margin-right:0.5rem;
   margin-left:0.5rem;
   margin-bottom:1.5rem;
-  border:2px solid #4F221F;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+  border:0.1rem solid var(--text);
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
   font-size: 20px;
   color: #F66D33;
 }
@@ -488,6 +518,19 @@ padding-left: 60px;
   margin-bottom:1.5rem;
 }
 
+.tools{
+margin-left:0;
+padding: 0;
+}
+
+.tools li{
+  list-style-type:none;
+  display:inline-block;
+}
+
+.tools i{
+  margin: 0rem 0.5rem 0rem 0rem;
+}
 
 
 /*
@@ -579,7 +622,7 @@ padding-left: 10px;
 
 
 
-@media(max-width:1280px) {
+@media(max-width:1680px) {
   .header {
     width: 99%;
     gap: 0px;
@@ -1029,11 +1072,11 @@ uncomment this part if you haven't added this code anywhere else
   padding: 10px 30px;
   font-size: 30px;
   text-align: center;
-  color: #F66D33;
+  color: var(--marin);
   background-color: #fff;
-  border:2px solid #4F221F;
+  border:0.1rem solid var(--button);
   border-radius: 100px;
-  box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset, 0px 5px 0px #4F221F;
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.2em 0em var(--button);
   transition: all 0.2s ease;
   cursor: pointer;
   margin-right:0.5rem;
@@ -1042,19 +1085,47 @@ uncomment this part if you haven't added this code anywhere else
 
 .comic-button:hover {
   background-color: #fff;
-  color: #F66D33;
-  border: 2px solid #4F221F;
-  box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset, 0px 8px 0px #4F221F;
-  transform: translateY(-3px);
+  color: var(--marin);
+  border:0.1rem solid var(--button);
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.4em 0em var(--button);
+  transform: translateY(-0.2em);
 
 }
 
 .comic-button:active {
-  background-color: #f0f0f0;
-  box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset, 0px 0px 0px #4F221F;
-  transform: translateY(4px);
+  background-color: var(--backdrop);
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0em 0em var(--button);
+  transform: translateY(0.2em);
 }
 
+
+
+
+.tool-button {
+  font-family: 'Redaction10';
+  color: var(--marin);
+  background-color: #fff;
+  list-style-type:none;
+  display:inline-block;
+  padding:.6rem 1rem;
+  border-radius:0.5rem;
+  margin-right:0.5rem;
+  margin-left:0.5rem;
+  margin-bottom:1.5rem;
+  border:0.1rem solid var(--text);
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+  font-size: 20px;
+  transition: all 0.2s ease;
+
+}
+
+.tool-button:hover {
+
+}
+
+.tool-button:active {
+
+}
 
 
 
@@ -1063,11 +1134,12 @@ uncomment this part if you haven't added this code anywhere else
 /* CSS for the slider container */
   .slider-container {
     position: relative;
-    width: 95%;
+    width: 92%;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius:1rem;
+    border:0.1rem solid var(--button);
   }
 
   /* CSS for the slider images */
@@ -1086,36 +1158,71 @@ uncomment this part if you haven't added this code anywhere else
   /* CSS for arrow buttons */
   .prev, .next {
     position: absolute;
-    top: 48%;
-    padding: 16px;
+    top: 46%;
+    padding: 0.8em;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
-    transition: 0.6s ease;
-    margin-left: 0.5rem;
+    transition: all 0.2s ease;
+    margin-left: 1rem;
 
-    border-radius: 100px;
-    color: #F66D33;
+    border-radius:0.5rem;
+    color: var(--marin);
     background-color: #fff;
-    border:2px solid #4F221F;
-    box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+    border:0.1rem solid var(--button);
+    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
   }
 
   .next {
-    right: 0.5rem;
-    border-radius: 100px;
-    color: #F66D33;
+    right: 1rem;
+    border-radius:0.5rem;
+    color: var(--marin);
     background-color: #fff;
-    border:2px solid #4F221F;
-    box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+    border:0.1rem solid var(--button);
+    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
   }
 
   /* CSS for hover effect on arrow buttons */
   .prev:hover, .next:hover {
     background-color: #fff;
     border-radius: 100px;
-    color: #F66D33;
-    border: 2px solid #4F221F;
-    box-shadow:rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
-    transform: translateY(-3px);
+    color: var(--marin);
+    border:0.1rem solid var(--button);
+    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+    transform: translateY(-0.2em);
+    border-radius:0.5rem;
   }
+
+
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 10rem 2rem 10rem;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius:1rem;
+  border:0.1rem solid var(--button);
+  display: flex;
+}
+
+.grid-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.text-overlay {
+  font-family: "Schibsted Grotesk", sans-serif;
+  position: absolute;
+  border-radius:0rem 1rem 0rem 1rem;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 20px;
+}
