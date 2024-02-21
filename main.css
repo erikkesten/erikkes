@@ -89,7 +89,7 @@ body{
   margin:5rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 1.1;
 
@@ -478,8 +478,7 @@ padding-left: 10px;
 .button{
 margin-left:0;
 padding: 0;
-padding-right: 10px;
-padding-left: 10px;
+
 
 }
 
@@ -488,6 +487,7 @@ padding-left: 10px;
   display:inline-block;
   padding:.6rem 0rem;
   margin-bottom:1.5rem;
+  margin-top: -1rem;
 }
 
 .button a{
@@ -676,6 +676,11 @@ padding-left: 10px;
     text-align: center;
   }
 
+  .hero-heading{
+    font-size: 2.25rem;
+    margin: 1.75rem;
+  }
+
 }
 
 
@@ -684,10 +689,7 @@ padding-left: 10px;
     font-size: 24px;
   }
 
-  h1{
-    font-size: 32px;
-    padding-bottom: 20px;
-  }
+
 
   p{
       font-size: 16px;
@@ -1069,7 +1071,7 @@ uncomment this part if you haven't added this code anywhere else
   font-family: 'Redaction10';
   text-decoration: none;
   display: inline-block;
-  padding: 10px 30px;
+  padding: 0.7rem 1.7rem;
   font-size: 30px;
   text-align: center;
   color: var(--marin);
@@ -1081,6 +1083,8 @@ uncomment this part if you haven't added this code anywhere else
   cursor: pointer;
   margin-right:0.5rem;
   margin-left:0.5rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
 }
 
 .comic-button:hover {
@@ -1194,11 +1198,11 @@ uncomment this part if you haven't added this code anywhere else
   }
 
 
-  .grid-container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin: 2rem 10rem 2rem 10rem;
+  margin: 2rem 8rem 2rem 8rem;
 }
 
 .grid-item {
@@ -1239,47 +1243,13 @@ uncomment this part if you haven't added this code anywhere else
 
 .dark-overlay p{
   color: var(--backdrop);
-  font-size: 0,875rem;
+  font-size: 1rem;
   margin-top: 2rem;
   margin-left: 2rem;
   text-align: left;
-    font-size: 18px;
-
-}
-
-.overlay-button {
-  font-family: "Schibsted Grotesk", sans-serif;
-  color: var(--backdrop);
-  list-style-type:none;
-  display:inline-block;
-  letter-spacing: -.025em;
-  padding:.6rem 1rem;
-  border-radius:0.5rem;
-  margin-right:0.5rem;
-  margin-left:-1rem;
-  border:0.1rem solid rgba(255, 255, 255, 0.4);
-  background-color: rgba(0,0,0,0.4);
-  font-size: 18px;
-  transition: all 0.2s ease;
-  cursor: pointer;
 
 
 }
-.overlay-circle {
-  font-family: "Schibsted Grotesk", sans-serif;
-  color: var(--backdrop);
-
-  padding:.5rem 1rem;
-  border-radius:10rem;
-  border:0.1rem solid rgba(255, 255, 255, 0.4);
-  background-color: rgba(0,0,0,0.4);
-  font-size: 18px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-
-
-}
-
 
 .overlay-button:hover {
 
@@ -1291,4 +1261,60 @@ uncomment this part if you haven't added this code anywhere else
 
 .dark-overlay .tools{
   margin-right: 27rem;
+}
+
+.overlay-list{
+  margin: 0;
+  padding: 0;
+}
+
+.overlay-list li{
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: var(--backdrop);
+  float: left;
+  display:inline-block;
+  list-style-type:none;
+  padding:.4rem 1rem;
+  border-radius:0.5rem;
+  margin-left:2rem;
+  margin-top:0.5rem;
+  border:0.1rem solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(0.4rem);
+  font-size: 1rem;
+  letter-spacing: -.025em;
+  font-variation-settings: "wght"625;
+}
+
+.overlay-list ol{
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: var(--backdrop);
+  float: left;
+  display:inline-block;
+  list-style-type:none;
+  padding:.4rem 1rem;
+  border-radius:3rem;
+  margin-left:0.75rem;
+  margin-top:0.5rem;
+  border:0.1rem solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(0.4rem);
+  font-size: 1rem;
+  letter-spacing: -.025em;
+}
+
+@media (max-width: 960px) {
+  .grid-container {
+    grid-template-columns: auto;
+    margin: 2rem 1rem 2rem 1rem;
+  }
+
+  .comic-button {
+    padding: 0.7rem 1.7rem;
+    font-size: 1.5rem;
+
+    margin-bottom: -1rem;
+
+
+  }
 }

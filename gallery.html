@@ -86,6 +86,66 @@ erikkes - Gallery
           </ul>
   </div>
 
+  <div class="grid-container">
+    <div class="grid-item" onclick="window.open('https://www.behance.net/gallery/191980227/Prototype-for-Record-Label-website' + location.search)">
+
+      <img src="img/work/chubu.jpg" alt="Image 1">
+      <div class="dark-overlay">
+      <p>Prototype website for a Record Label</p>
+        <ul class="overlay-list">
+          <li>View more</li>
+          <ol>&#10095;</ol>
+        </ul>
+      </div>
+
+    </div>
+    <div class="grid-item">
+
+      <img src="img/work/skinbid-show.png" alt="Image 1">
+      <div class="dark-overlay">
+      <p>Logo concept for SkinBid</p>
+      <ul class="overlay-list">
+        <li>View more</li>
+        <ol>&#10095;</ol>
+      </ul>
+      </div>
+
+    </div>
+    <div class="grid-item">
+
+      <img src="img/work/MONO-tag.png" alt="Image 1">
+      <div class="dark-overlay">
+      <p>Logo suggestion for Réaimer</p>
+      <ul class="overlay-list">
+        <li>View more</li>
+        <ol>&#10095;</ol>
+      </ul>
+      </div>
+
+    </div>
+    <div class="grid-item">
+
+      <img src="img/photos/boys.jpg" alt="Image 1">
+      <div class="dark-overlay">
+      <p>Hobby photography</p>
+      <ul class="overlay-list">
+        <li>View more</li>
+        <ol>&#10095;</ol>
+      </ul>
+      </div>
+
+    </div>
+  </div>
+
+<div class="center">
+  <img src="img/under-construction.gif" class="pad">
+  <br>
+  <br>
+  <br>
+  <p>coming soon</p>
+  <p>return some other time</p>
+</div>
+
   <br>
   <hr>
   <br>
@@ -370,6 +430,17 @@ $(document).ready(function() {
     var newPosition = -slideIndex * 100;
     document.querySelector('.slider-images').style.transform = `translateX(${newPosition}%)`;
   }
+</script>
+
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".grid-item"), {
+  max: 4,
+  speed: 600,
+  reverse: true,
+  glare: true,
+  "max-glare": 0.3,
+  });
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
