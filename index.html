@@ -120,6 +120,73 @@ erikkes - Home
             <li>HTML</li>
             <li>CSS</li>
           </ul>
+
+<div class="parent-container">
+
+          <div class="grid-block">
+            <div class="grid-block-item">
+              <div class="dark-overlay">
+              <h2>Affinity Designer</h2>
+              <p>Affinity Designer is a professional-grade vector graphics editor and provides powerful tools for creating intricate designs, illustrations, and user interfaces.</p>
+                <ul class="overlay-list">
+                  <li>Design</li>
+                  <li>Illustration</li>
+                  <li>Vectors</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="grid-block-item">
+              <div class="dark-overlay">
+              <h2>DaVinci Resolve</h2>
+              <p>DaVinci Resolve is a multifaceted video editing and color grading software, capabilities in post-production, including visual effects and audio post-processing.</p>
+              <ul class="overlay-list">
+                <li>Video Editing</li>
+                <li>Color Grading</li>
+                <li>Visual Effects</li>
+              </ul>
+              </div>
+            </div>
+
+            <div class="grid-block-item">
+              <div class="dark-overlay">
+              <h2>Photoshop</h2>
+              <p>Adobe Photoshop is a leading software for image editing and graphic design, offering an array of tools for compositing and manipulating digital images.</p>
+              <ul class="overlay-list">
+                <li>Design</li>
+                <li>Photo Editing</li>
+                <li>Creation</li>
+              </ul>
+              </div>
+            </div>
+
+            <div class="grid-block-item">
+              <div class="dark-overlay">
+              <h2>Lightroom</h2>
+              <p>Adobe Lightroom is a versatile photo editing software that enables photographers to organize, edit, and enhance their images seamlessly.</p>
+              <ul class="overlay-list">
+                <li>Photography</li>
+                <li>Photo Editing</li>
+                <li>Color Grading</li>
+              </ul>
+              </div>
+            </div>
+
+            <div class="grid-block-item">
+              <div class="dark-overlay">
+              <h2>Blockbench</h2>
+              <p>Blockbench is a versatile 3D modeling software specifically tailored for creating low-poly models and textures.</p>
+              <ul class="overlay-list">
+                <li>3D Modeling</li>
+                <li>Low-poly</li>
+                <li>Texturing</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+
+</div>
+
           <img src="img/under-construction.gif" class="pad">
           <br>
           <br>
@@ -140,6 +207,7 @@ erikkes - Home
               <li><button onclick="location.href='https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=erik@kesten.se'" type="button" class="tool-button"><i class="fa-solid fa-paper-plane fa-xs"></i>Contact</button></li>
             </ul>
 </div>
+
 <img src="img/under-construction.gif" class="pad">
 <br>
 <br>
@@ -189,6 +257,30 @@ erikkes - Home
   <div class="grid-item">
 
     <img src="img/photos/boys.jpg" alt="Image 1">
+    <div class="dark-overlay">
+    <p>Hobby photography</p>
+    <ul class="overlay-list">
+      <li>View more</li>
+      <ol>&#10095;</ol>
+    </ul>
+    </div>
+
+  </div>
+  <div class="grid-item">
+
+    <img src="img/logos/saturn.png" alt="Image 1">
+    <div class="dark-overlay">
+    <p>Hobby photography</p>
+    <ul class="overlay-list">
+      <li>View more</li>
+      <ol>&#10095;</ol>
+    </ul>
+    </div>
+
+  </div>
+  <div class="grid-item">
+
+    <img src="img/logos/anagram.png" alt="Image 1">
     <div class="dark-overlay">
     <p>Hobby photography</p>
     <ul class="overlay-list">
@@ -314,7 +406,15 @@ $(document).ready(function() {
   speed: 600,
   reverse: true,
   glare: true,
-  "max-glare": 0.3,
+  "max-glare": 0.2,
+  });
+
+  VanillaTilt.init(document.querySelectorAll(".grid-block-item"), {
+  max: 4,
+  speed: 600,
+  reverse: true,
+  glare: true,
+  "max-glare": 0.2,
   });
 </script>
 

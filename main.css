@@ -42,7 +42,8 @@
   --backdrop: #fbfaf5;
   --border:#17184b;
   --text: #0d0015;
-  --tool: #f7fcfe ;
+  --tool: #f7fcfe;
+  --card: #c0c6c9;
 }
 
 html{
@@ -1197,10 +1198,16 @@ uncomment this part if you haven't added this code anywhere else
     border-radius:0.5rem;
   }
 
+.parent-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the grid */
+  align-items: center; /* Vertically center the grid */
+
+}
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   gap: 2rem;
   margin: 2rem 8rem 2rem 8rem;
 }
@@ -1219,6 +1226,24 @@ uncomment this part if you haven't added this code anywhere else
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.grid-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 8rem 2rem 8rem;
+}
+
+.grid-block-item {
+  background-color: var(--card);
+  position: relative;
+  overflow: hidden;
+  border-radius:1rem;
+  border:0.1rem solid var(--button);
+  display: flex;
+  height: 20rem;
+  width: 20rem;
 }
 
 .text-overlay {
@@ -1246,9 +1271,21 @@ uncomment this part if you haven't added this code anywhere else
   font-size: 1rem;
   margin-top: 2rem;
   margin-left: 2rem;
+  margin-right: 2rem;
   text-align: left;
 
 
+}
+.dark-overlay ul{
+  margin-left: 1.5rem;
+}
+
+.dark-overlay h2{
+  color: var(--backdrop);
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  text-align: left;
 }
 
 .overlay-button:hover {
@@ -1266,6 +1303,7 @@ uncomment this part if you haven't added this code anywhere else
 .overlay-list{
   margin: 0;
   padding: 0;
+
 }
 
 .overlay-list li{
@@ -1276,7 +1314,7 @@ uncomment this part if you haven't added this code anywhere else
   list-style-type:none;
   padding:.4rem 1rem;
   border-radius:0.5rem;
-  margin-left:2rem;
+  margin-left:0.25rem;
   margin-top:0.5rem;
   border:0.1rem solid rgba(255, 255, 255, 0.4);
   background-color: rgba(0,0,0,0.4);
@@ -1284,6 +1322,7 @@ uncomment this part if you haven't added this code anywhere else
   font-size: 1rem;
   letter-spacing: -.025em;
   font-variation-settings: "wght"625;
+
 }
 
 .overlay-list ol{
@@ -1309,6 +1348,7 @@ uncomment this part if you haven't added this code anywhere else
     margin: 2rem 1rem 2rem 1rem;
   }
 
+
   .comic-button {
     padding: 0.7rem 1.7rem;
     font-size: 1.5rem;
@@ -1317,4 +1357,13 @@ uncomment this part if you haven't added this code anywhere else
 
 
   }
+}
+
+@media (max-width: 768px) {
+
+  .grid-block {
+    grid-template-columns: auto;
+    margin: 2rem 1rem 2rem 1rem;
+  }
+
 }
