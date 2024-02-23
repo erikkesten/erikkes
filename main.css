@@ -1196,7 +1196,7 @@ uncomment this part if you haven't added this code anywhere else
 
 .grid-block {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   gap: 2rem;
   margin: 2rem 8rem 2rem 8rem;
 }
@@ -1412,14 +1412,15 @@ uncomment this part if you haven't added this code anywhere else
     margin-right: 0.5rem;
   }
 
+
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 750px) {
   .grid-block {
     grid-template-columns: auto;
     margin: 2rem 1rem 2rem 1rem;
   }
+
 
 }
 
