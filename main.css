@@ -1415,13 +1415,11 @@ uncomment this part if you haven't added this code anywhere else
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .grid-block {
     grid-template-columns: auto;
     margin: 2rem 1rem 2rem 1rem;
   }
-
-
 }
 
 @media(max-width:720px) {
@@ -1456,10 +1454,12 @@ uncomment this part if you haven't added this code anywhere else
     margin-right: 0.4rem;
   }
 
+
 }
 
 
 @media(max-width:600px) {
+
   a{
     font-size: 24px;
   }
