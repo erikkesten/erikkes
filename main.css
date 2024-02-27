@@ -52,7 +52,7 @@ html{
   scrollbar-color: var(--marin) var(--backdrop);
   overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-padding: 10rem;
+  scroll-padding: 2.5rem;
 }
 
 
