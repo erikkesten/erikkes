@@ -308,16 +308,8 @@ hr{
   width:60;
   height:60;
   margin-bottom: 0px;
-  margin-left: 30px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.logo{
-  width:60;
-  height:60;
-  margin-bottom: 0px;
-  margin-left: 30px;
+  margin-left: 2rem;
+  margin-right: 2rem;
   display: flex;
   justify-content: flex-end;
 }
