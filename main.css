@@ -182,7 +182,7 @@ h4{
 
 a{
   font-family: "Schibsted Grotesk", sans-serif;
-  font-size: 32px;
+  font-size: 2.25rem;
   margin: 0px;
   text-decoration: none;
   font-variation-settings: "wght"625;
@@ -589,8 +589,8 @@ padding: 0;
 .nav{
 margin-left:0;
 padding: 0;
-padding-right: 10px;
-padding-left: 10px;
+padding-right: 1rem;
+padding-left: 1rem;
 
 }
 
@@ -1410,12 +1410,7 @@ uncomment this part if you haven't added this code anywhere else
     margin-right: 0.5rem;
   }
 
-  .top-nav{
-    padding-right: 1rem;
-    padding-left: 1rem;
-    text-align: center;
-    margin: 0;
-  }
+
 
 
 
@@ -1474,8 +1469,13 @@ uncomment this part if you haven't added this code anywhere else
     margin-bottom: 0;
   }
 
+  .nav{
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+  }
+
   a{
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   p{
