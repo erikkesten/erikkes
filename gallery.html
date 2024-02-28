@@ -138,27 +138,25 @@ erikkes - Gallery
 
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/posters/print.jpg')">
 
     <img src="img/posters/print.jpg" alt="Image 1">
     <div class="dark-overlay">
     <p>🪐 Prints</p>
     <ul class="overlay-list">
-      <li>View more</li>
-      <ol>&#10095;</ol>
+      <ol>+</ol>
     </ul>
     </div>
 
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/posters/soldat.jpg')">
 
     <img src="img/posters/soldat.jpg" alt="Image 1">
     <div class="dark-overlay">
     <p>🕹️ Prints</p>
     <ul class="overlay-list">
-      <li>View more</li>
-      <ol>&#10095;</ol>
+      <ol>+</ol>
     </ul>
     </div>
 
@@ -294,53 +292,49 @@ erikkes - Gallery
 
 <div class="grid-container">
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/gifs/airmax.gif')">
 
     <img src="img/gifs/airmax.gif" alt="Image 1">
     <div class="dark-overlay">
     <p>Low-poly 3D model of a Nike Air Max</p>
     <ul class="overlay-list">
-      <li>View more</li>
-      <ol>&#10095;</ol>
+      <ol>+</ol>
     </ul>
     </div>
 
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/gifs/mitshu.gif')">
 
     <img src="img/gifs/mitshu.gif" alt="Image 1">
     <div class="dark-overlay">
     <p>Low-poly 3D model of a Mitsubishi Evo</p>
     <ul class="overlay-list">
-      <li>View more</li>
-      <ol>&#10095;</ol>
+      <ol>+</ol>
     </ul>
     </div>
 
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/gifs/airmax-dots.gif')">
 
     <img src="img/gifs/airmax-dots.gif" alt="Image 1">
     <div class="dark-overlay">
     <p>Generative 3D effect of a Nike Air Max</p>
     <ul class="overlay-list">
-      <li>View more</li>
-      <ol>&#10095;</ol>
+      <ol>+</ol>
     </ul>
     </div>
 
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/gifs/jordan-dots.gif')">
 
-    <img src="img/gifs/jordan-dots.gif" alt="Image 1">
+    <img src="img/gifs/jordan-dots.gif" alt="Image 1" >
     <div class="dark-overlay">
     <p>Generative 3D effect of a Nike Air Jordan</p>
     <ul class="overlay-list">
-      <li>View more</li>
-      <ol>&#10095;</ol>
+      <ol>+</ol>
     </ul>
     </div>
 
@@ -356,14 +350,19 @@ erikkes - Gallery
 </ul>
 </div>
 
+
 <br>
 <hr>
 <br>
 <br>
 
 
+<!---Image Zoom below--->
 
-
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img" onclick="stopPropagation(event)">
+</div>
 
 
   <div class="center">
@@ -487,6 +486,28 @@ $(document).ready(function() {
   glare: true,
   "max-glare": 0.2,
   });
+</script>
+
+<script>
+function openModal(imageUrl) {
+  // Check if the imageUrl is provided (clicked on an image) and is not empty
+  if (imageUrl && imageUrl.trim() !== "") {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modal-img");
+
+    modal.style.display = "flex";
+    modalImg.src = imageUrl;
+    body.style.overflow = "hidden"; // Disable scrolling
+  }
+}
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  var body = document.querySelector("body");
+
+  modal.style.display = "none";
+  body.style.overflow = "auto"; // Enable scrolling
+}
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

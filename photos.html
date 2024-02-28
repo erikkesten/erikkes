@@ -96,51 +96,51 @@ erikkes - Photograhps
 
 <div class="grid-container">
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/boys.jpg')">
     <img src="img/photos/boys.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/field2.jpg')">
     <img src="img/photos/field2.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/field.jpg')">
     <img src="img/photos/field.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/tree.jpg')">
     <img src="img/photos/tree.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/cow.jpg')">
     <img src="img/photos/cow.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/leaf.jpg')">
     <img src="img/photos/leaf.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/waterfall.jpg')">
     <img src="img/photos/waterfall.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/football.jpg')">
     <img src="img/photos/football.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/hallway.jpg')">
     <img src="img/photos/hallway.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/house.jpg')">
     <img src="img/photos/house.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/sign.jpg')">
     <img src="img/photos/sign.jpg" alt="Image 1">
   </div>
 
-  <div class="grid-item">
+  <div class="grid-item" onclick="openModal('img/photos/city.jpg')">
     <img src="img/photos/city.jpg" alt="Image 1">
   </div>
 
@@ -151,6 +151,7 @@ erikkes - Photograhps
 <div class="center">
 <ul class="tools">
   <li><button onclick="location.href='gallery.html'" type="button" class="link-button"><i class="fa-solid fa-rotate-left"></i>Return</button></li>
+  <li><button onclick="location.href='#'" type="button" class="link-button"><i class="fa-solid fa-arrow-up"></i>Top</button></li>
 </ul>
 </div>
 
@@ -160,7 +161,12 @@ erikkes - Photograhps
 <br>
 
 
+<!---Image Zoom below--->
 
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img" onclick="stopPropagation(event)">
+</div>
 
 
 
@@ -285,6 +291,28 @@ $(document).ready(function() {
   glare: true,
   "max-glare": 0.1,
   });
+</script>
+
+<script>
+function openModal(imageUrl) {
+  // Check if the imageUrl is provided (clicked on an image) and is not empty
+  if (imageUrl && imageUrl.trim() !== "") {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modal-img");
+
+    modal.style.display = "flex";
+    modalImg.src = imageUrl;
+    body.style.overflow = "hidden"; // Disable scrolling
+  }
+}
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  var body = document.querySelector("body");
+
+  modal.style.display = "none";
+  body.style.overflow = "auto"; // Enable scrolling
+}
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
