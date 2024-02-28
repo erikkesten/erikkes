@@ -516,8 +516,8 @@ padding-left: 10px;
 .button{
 margin-left:0;
 padding: 0;
-
-
+margin-left: 3rem;
+margin-right: 3rem;
 }
 
 .button li{
@@ -984,7 +984,7 @@ uncomment this part if you haven't added this code anywhere else
   text-decoration: none;
   display: inline-block;
   padding: 0.7rem 1.7rem;
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   color: var(--marin);
   background-color: #fff;
@@ -1389,10 +1389,14 @@ uncomment this part if you haven't added this code anywhere else
   }
 
   .comic-button {
-    padding: 0.7rem 1.7rem;
+    padding: 0.6rem 1.5rem;
     font-size: 1.5rem;
+    margin-right:0.5rem;
+    margin-left:0.5rem;
+    margin-top: 0.5rem;
     margin-bottom: -1rem;
   }
+
 
 }
 
@@ -1406,6 +1410,15 @@ uncomment this part if you haven't added this code anywhere else
     margin-right: 0.5rem;
   }
 
+  .top-nav{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+
+
 
 }
 
@@ -1414,6 +1427,7 @@ uncomment this part if you haven't added this code anywhere else
     grid-template-columns: auto;
     margin: 2rem 1rem 2rem 1rem;
   }
+
 }
 
 @media(max-width:720px) {
@@ -1429,11 +1443,6 @@ uncomment this part if you haven't added this code anywhere else
     font-size: 76px;
   }
 
-  .top-nav{
-    padding-right: 10px;
-    padding-left: 10px;
-    text-align: center;
-  }
 
   .hero-heading{
     font-size: 2.25rem;
@@ -1464,6 +1473,10 @@ uncomment this part if you haven't added this code anywhere else
 
   .navbar {
       margin-top: 14px;
+  }
+  .button{
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .logo{
