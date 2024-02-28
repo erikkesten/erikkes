@@ -602,7 +602,7 @@ padding-left: 1rem;
 }
 
 .nav a{
-  margin-left:2rem;
+  margin-left:3rem;
 }
 
 .nav i{
@@ -1470,12 +1470,17 @@ uncomment this part if you haven't added this code anywhere else
   }
 
   .nav{
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .nav a{
+    margin-left:1rem;
   }
 
   a{
     font-size: 1.5rem;
+
   }
 
   p{
