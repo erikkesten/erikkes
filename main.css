@@ -1428,6 +1428,13 @@ uncomment this part if you haven't added this code anywhere else
     margin: 2rem 1rem 2rem 1rem;
   }
 
+  .hero-heading{
+    font-size: 2.5rem;
+    margin: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
 }
 
 @media(max-width:720px) {
@@ -1444,10 +1451,7 @@ uncomment this part if you haven't added this code anywhere else
   }
 
 
-  .hero-heading{
-    font-size: 2.25rem;
-    margin: 1.75rem;
-  }
+
 
   .heading h1{
     font-size: 2.25rem;
@@ -1462,6 +1466,13 @@ uncomment this part if you haven't added this code anywhere else
 
 
 @media(max-width:600px) {
+
+  .hero-heading{
+    font-size: 2rem;
+    margin: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   a{
     font-size: 24px;
