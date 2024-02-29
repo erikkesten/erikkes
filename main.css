@@ -87,8 +87,9 @@ body{
   color: var(--title);
   font-variation-settings: "wght"625;
   letter-spacing: -.025em;
-  margin: 4rem;
   margin-top: 4rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
   margin-bottom: 0;
   font-size: 3rem;
   font-weight: 400;
@@ -113,8 +114,9 @@ body{
 .heading{
   display: flex;
   justify-content: center;
-  margin: 4rem;
   margin-top: 4rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
   margin-bottom: 0;
 }
 
@@ -1466,7 +1468,9 @@ uncomment this part if you haven't added this code anywhere else
 
   .hero-heading{
     font-size: 2.5rem;
-    margin: 4rem;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
     margin-bottom: 0;
   }
   .logo{
@@ -1515,7 +1519,9 @@ uncomment this part if you haven't added this code anywhere else
   }
   .hero-heading{
     font-size: 2rem;
-    margin: 3rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     margin-bottom: 0;
   }
 
@@ -1583,8 +1589,10 @@ uncomment this part if you haven't added this code anywhere else
 .heading{
   display: flex;
   justify-content: center;
-  margin: 2rem;
-  margin-bottom: 0rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 0;
 }
 
 .heading h1{
@@ -1603,15 +1611,19 @@ uncomment this part if you haven't added this code anywhere else
 
   .hero-heading{
     font-size: 1.6rem;
-    margin: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-bottom: 2rem;
   }
 
   .heading{
     display: flex;
     justify-content: center;
-    margin: 2rem;
-    margin-bottom: 0rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 0;
   }
   .heading h1{
     font-size: 1.6rem;
