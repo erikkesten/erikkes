@@ -1587,7 +1587,6 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .heading{
-  display: flex;
   justify-content: center;
   margin-top: 2rem;
   margin-left: 2rem;
@@ -1607,7 +1606,7 @@ uncomment this part if you haven't added this code anywhere else
 
 }
 
-@media(max-width:500px) {
+@media(max-width:480px) {
 
   .hero-heading{
     font-size: 1.6rem;
