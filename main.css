@@ -87,8 +87,7 @@ body{
   color: var(--title);
   font-variation-settings: "wght"625;
   letter-spacing: -.025em;
-  margin:5rem;
-  margin-top: 0;
+  margin: 4rem;
   margin-bottom: 0;
   font-size: 3rem;
   font-weight: 400;
@@ -113,7 +112,8 @@ body{
 .heading{
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin: 4rem;
+  margin-bottom: 0;
 }
 
 .heading svg{
@@ -121,6 +121,7 @@ body{
   margin: 0;
   width: 4rem;
   margin-right: 1rem;
+
 }
 
 .heading h1{
@@ -129,6 +130,8 @@ body{
   color: var(--title);
   font-size: 4rem;
   margin: 0;
+
+
 }
 
 h1{
@@ -197,6 +200,13 @@ p{
   letter-spacing: -.025em;
 }
 
+.rem{
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
 li{
     font-family: 'Redaction10';
     color: var(--marin);
@@ -254,9 +264,10 @@ hr{
   border-width: 0.1em;
   width: 70%;
   margin:0 auto;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   border-color: var(--text);
+
 
   box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
 }
@@ -426,9 +437,9 @@ hr{
 
 .txt{
   text-align: left;
-  padding-right: 70px;
-  padding-left: 70px;
-  padding-bottom: 20px;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-bottom: 1rem;
 }
 
 
@@ -516,6 +527,7 @@ margin-left:0;
 padding: 0;
 margin-left: 3rem;
 margin-right: 3rem;
+margin-bottom: 1rem;
 }
 
 .button li{
@@ -1061,6 +1073,7 @@ uncomment this part if you haven't added this code anywhere else
     overflow: hidden;
     border-radius:1rem;
     border:0.1rem solid var(--button);
+
   }
 
   /* CSS for the slider images */
@@ -1437,11 +1450,9 @@ uncomment this part if you haven't added this code anywhere else
     width: 3rem;
     margin-right: 0.5rem;
   }
-
-
-
-
-
+  .button{
+    margin-bottom: 0.5rem;
+  }
 
 }
 
@@ -1454,8 +1465,14 @@ uncomment this part if you haven't added this code anywhere else
   .hero-heading{
     font-size: 2.5rem;
     margin: 4rem;
-    margin-top: 0;
     margin-bottom: 0;
+  }
+  .logo{
+    width:3rem;
+    height:3rem;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-right: 0;
   }
 
 }
@@ -1474,10 +1491,9 @@ uncomment this part if you haven't added this code anywhere else
   }
 
 
-
-
   .heading h1{
     font-size: 2.25rem;
+
   }
   .heading svg{
     width: 2.25rem;
@@ -1485,15 +1501,19 @@ uncomment this part if you haven't added this code anywhere else
   }
 
 
+
 }
 
 
 @media(max-width:600px) {
 
+  .txt{
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
   .hero-heading{
     font-size: 2rem;
     margin: 3rem;
-    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -1521,14 +1541,11 @@ uncomment this part if you haven't added this code anywhere else
   .button{
     margin-left: 2rem;
     margin-right: 2rem;
+    margin-bottom: 0.5rem;
   }
 
-  .logo{
-    width:42;
-    height:42;
-    padding-top: 11px;
-    padding-bottom: 11px;
-  }
+
+
 
   .yt {
     width: 320px;
@@ -1542,11 +1559,6 @@ uncomment this part if you haven't added this code anywhere else
     padding-bottom: 10px;
     font-size: 64px;
     text-align: center;
-  }
-
-  .txt{
-    padding-right: 45px;
-    padding-left: 45px;
   }
 
   .images{
@@ -1566,6 +1578,13 @@ uncomment this part if you haven't added this code anywhere else
     display: none;
 }
 
+.heading{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  margin-bottom: 0rem;
+}
+
 .heading h1{
   font-size: 2rem;
 }
@@ -1574,5 +1593,67 @@ uncomment this part if you haven't added this code anywhere else
   margin-right: 0.4rem;
 }
 
+
+
+}
+
+@media(max-width:500px) {
+
+  .hero-heading{
+    font-size: 1.6rem;
+    margin: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .heading{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    margin-bottom: 0rem;
+  }
+  .heading h1{
+    font-size: 1.6rem;
+
+
+  }
+  .heading svg{
+    width: 1.6rem;
+
+  }
+  .txt{
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+
+  .nav a{
+    font-size: 1.4rem;
+  }
+  .nav i{
+  }
+
+  .logo{
+    width:2.25rem;
+    height:2.25rem;
+    margin-bottom: 0px;
+    margin-left: 2rem;
+    margin-right: 0rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .comic-button {
+    padding: 0.4rem 1.3rem;
+    font-size: 1.3rem;
+    margin-right:0.5rem;
+    margin-left:0.5rem;
+    margin-top: 0rem;
+    margin-bottom: -1rem;
+  }
 
 }
