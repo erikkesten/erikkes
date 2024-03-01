@@ -217,9 +217,14 @@ li{
 }
 
 hr{
-  border: 1px dashed var(--text);
   width: 70%;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #c3c3c4, var(--text), #c3c3c4);
 }
+
+
 
 .topbar {
   border-radius: 1em 1em 0em 0em;
@@ -1543,7 +1548,7 @@ uncomment this part if you haven't added this code anywhere else
   }
   .hero-heading{
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 3.25rem;
     margin-left: 3rem;
     margin-right: 3rem;
     margin-bottom: 0;
@@ -1612,7 +1617,7 @@ uncomment this part if you haven't added this code anywhere else
 
 .heading{
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3.25rem;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-bottom: 0;
@@ -1634,7 +1639,7 @@ uncomment this part if you haven't added this code anywhere else
 
   .hero-heading{
     font-size: 1.6rem;
-    margin-top: 2rem;
+    margin-top: 3.25rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
@@ -1643,7 +1648,7 @@ uncomment this part if you haven't added this code anywhere else
   .heading{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 3.25rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 0;
