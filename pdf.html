@@ -1,0 +1,217 @@
+<html lang="en">
+
+<head>
+
+<title>
+erikkes | Gallery
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<link href="css/bootstrap.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://use.typekit.net/jzs1ksm.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script src="https://kit.fontawesome.com/fe1a8cf981.js" crossorigin="anonymous"></script>
+
+<link rel="icon" type="image/svg" href="icons/logo-w.svg" id="favicon">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<script>
+    window.onload = function() {
+        var userAgent = navigator.userAgent.toLowerCase();
+        var favicon = document.getElementById('favicon');
+
+        // Detect if the user is using a specific search engine
+        if (userAgent.includes("google")) {
+            // Change favicon to black
+            favicon.href = "logo-b.svg";
+        } else {
+            // Default to white favicon
+            favicon.href = "logo-w.svg";
+        }
+    };
+</script>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    <h2>Portfolio</h2>
+
+  </div>
+
+
+<div class="pdf">
+
+
+
+
+
+<object data="pdf/Funktionell_Design_Erik_Kesten.pdf" type="application/pdf" width="100%" height="100%"></object>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+
+<div class="center">
+
+  <ul class="tools">
+    <li><button onclick="window.open('index.html' + location.search)" type="button" class="link-button"><i class="fa-solid fa-window-maximize"></i>Portfolio</button></li>
+    <li><button onclick="window.open('https://www.youtube.com/@erikkesten6079' + location.search)" type="button" class="link-button"><i class="fa-brands fa-youtube"></i>YouTube</button></li>
+    <li><button onclick="window.open('https://www.behance.net/erikkesten/' + location.search)" type="button" class="link-button"><i class="fa-brands fa-square-behance"></i>Behance</button></li>
+    <li><button onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=erik@kesten.se' + location.search)" type="button" class="link-button"><i class="fa-solid fa-paper-plane fa-xs"></i>Contact</button></li>
+  </ul>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer">
+    <p>erikkes 2024</p>
+    <ul class="contact-me">
+      <li><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=erik@kesten.se" target="_blank" class="orange"><i class="fa-solid fa-paper-plane fa-xs"></i>Contact</a></li>
+    </ul>
+</div>
+
+
+<script>
+
+$(document).ready(function() {
+
+	$('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
+});
+
+$(document).ready(function() {
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+	$('.popup-with-move-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-slide-bottom'
+	});
+});
+</script>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slider-image");
+    if (slideIndex >= slides.length) {slideIndex = 0}
+    if (slideIndex < 0) {slideIndex = slides.length - 1}
+    var newPosition = -slideIndex * 100;
+    document.querySelector('.slider-images').style.transform = `translateX(${newPosition}%)`;
+  }
+</script>
+
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".grid-item"), {
+  max: 4,
+  speed: 600,
+  reverse: true,
+  glare: true,
+  "max-glare": 0.2,
+  });
+
+  VanillaTilt.init(document.querySelectorAll(".grid-block-item"), {
+  max: 6,
+  speed: 600,
+  reverse: true,
+  glare: true,
+  "max-glare": 0.2,
+  });
+</script>
+
+<script>
+function openModal(imageUrl) {
+  // Check if the imageUrl is provided (clicked on an image) and is not empty
+  if (imageUrl && imageUrl.trim() !== "") {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modal-img");
+
+    modal.style.display = "flex";
+    modalImg.src = imageUrl;
+    body.style.overflow = "hidden"; // Disable scrolling
+  }
+}
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  var body = document.querySelector("body");
+
+  modal.style.display = "none";
+  body.style.overflow = "auto"; // Enable scrolling
+}
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
