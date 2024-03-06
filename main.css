@@ -231,7 +231,7 @@ hr{
   border-style: solid ;
   border-width: 0.1em;
   border-bottom: 0px;
-  width: 66%;
+  width: 64%;
   margin:0 auto;
 
   /*
@@ -260,7 +260,7 @@ hr{
   border-style: solid;
   border-width: 0.1em;
   border-color: var(--text);
-  width: 66%;
+  width: 64%;
   margin:0 auto;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -273,7 +273,7 @@ hr{
   background-color: var(--background);
   border-style: none solid solid;
   border-width: 0.1em;
-  width: 66%;
+  width: 64%;
   margin:0 auto;
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -296,7 +296,7 @@ hr{
   border-width: 0.1em;
   border-radius: 0em 0em 1em 1em;
   border-color: var(--text);
-  width: 66%;
+  width: 64%;
   margin:0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1398,7 +1398,6 @@ uncomment this part if you haven't added this code anywhere else
   display: flex;
   width: 29rem;
   align-items: center;
-
   justify-content: center;
 }
 
@@ -1741,14 +1740,17 @@ uncomment this part if you haven't added this code anywhere else
     height: 18rem;
     margin: 0; /* Remove any margins */
     position: static; /* Reset positioning for smaller screens */
+
   }
 
   .headington-item {
     order: 2; /* Change the order for smaller screens */
+    height: 9rem;
   }
 
   .headington-item-r {
     order: 1; /* Change the order for smaller screens */
+    padding: 0.2rem;
   }
 
   .headington-item h1{
