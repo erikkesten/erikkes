@@ -73,14 +73,34 @@ erikkes | Home
 
 <div class="main">
 
-        <h1 class="hero-heading">Nice to meet you! 👋 <br> I'm Erik, an aspiring Graphics designer from Sweden.</h1>
+
+  <div class="headington-parent">
+            <div class="headington-block">
+              <div class="headington-item">
+                  <h1>Nice to meet you! 👋 <br> I'm Erik, an aspiring <br> Graphics designer <br> from Sweden.</h1>
+              </div>
+
+              <div class="headington-item-r">
+                  <div class="avatar">
+                    <img src="img/avatar.jpg" alt="Image 1">
+                  </div>
+              </div>
+            </div>
+  </div>
+
+<div class="center">
         <ul class="button">
           <li><button onclick="location.href='#showcase'" type="button" class="comic-button">Quick Look</button></li>
           <li><button onclick="location.href='#competence'" type="button" class="comic-button">Competences & Skills</button></li>
           <li><button onclick="location.href='#contact'" type="button" class="comic-button">Contact</button></li>
         </ul>
+</div>
+
+
+<hr>
+<br>
         <p class="txt">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac blandit sem. Morbi a nisl laoreet, tempus justo vitae, sollicitudin quam. Nam tempor vulputate leo, imperdiet tempor eros euismod eget. Maecenas at congue neque, sit amet viverra mi. Maecenas elementum ornare massa nec ullamcorper. Nullam ut sagittis augue.
+          I’m Erik Kesten, 23-year-old Graphics designer driven by always improving. In highschool I chose to specialize in graphic & web design which sparked a flame in me. I continued onwards in the same path at university and graduated in 2023 as a Media Technician.
           <br>
           <br>
           Sed eget mi massa. In molestie congue fringilla. Phasellus vel nulla imperdiet, auctor felis sed, imperdiet sem.Donec vulputate mauris sit amet sagittis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia tempus mi interdum facilisis. Vestibulum varius commodo porttitor. Donec at vestibulum nulla. Proin a nibh a ante maximus dictum. Nunc sit amet eros aliquet, porttitor orci nec, pharetra arcu. Vestibulum placerat tellus vel odio blandit, eu feugiat sapien mattis. Proin ut justo libero.
@@ -353,6 +373,14 @@ $(document).ready(function() {
 
   VanillaTilt.init(document.querySelectorAll(".grid-block-item"), {
   max: 6,
+  speed: 600,
+  reverse: true,
+  glare: true,
+  "max-glare": 0.2,
+  });
+
+  VanillaTilt.init(document.querySelectorAll(".avatar"), {
+  max: 20,
   speed: 600,
   reverse: true,
   glare: true,
