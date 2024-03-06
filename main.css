@@ -1419,6 +1419,7 @@ uncomment this part if you haven't added this code anywhere else
   display: flex;
   padding: 0.5rem;
   width: 16rem;
+  height: 16rem;
   align-items: center;
 }
 
@@ -1632,6 +1633,7 @@ uncomment this part if you haven't added this code anywhere else
   }
   .headington-item-r {
     width: 14rem;
+    height: 14rem;
   }
   .txt{
     padding-right: 4rem;
@@ -1691,6 +1693,7 @@ uncomment this part if you haven't added this code anywhere else
   }
   .headington-item-r {
     width: 11rem;
+    height: 11rem;
   }
 
   .txt{
@@ -1735,6 +1738,7 @@ uncomment this part if you haven't added this code anywhere else
   .headington-item,
   .headington-item-r {
     width: 18rem; /* Let items take their natural width */
+    height: 18rem;
     margin: 0; /* Remove any margins */
     position: static; /* Reset positioning for smaller screens */
   }
