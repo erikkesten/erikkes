@@ -46,6 +46,7 @@
   --text: #0d0015;
   --tool: #f7fcfe;
   --card: #c0c6c9;
+  --active: #ebeae4;
 }
 
 html{
@@ -883,33 +884,44 @@ uncomment this part if you haven't added this code anywhere else
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 0 2rem;
+
 }
 
 
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  max-width: 30%;
-  padding: 0 4px;
+  -ms-flex: 32%; /* IE10 */
+  flex: 32%;
+  max-width: 32%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+
 }
 
 .column img {
-  margin-top: 14px;
+  margin-top:1rem;
   vertical-align: middle;
   width: 100%;
+  border-radius:1rem;
+  border:0.1rem solid var(--button);
+
 }
 
 .column iframe {
   margin-top: 14px;
   width: 560px;
   height: 300px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+    padding: 0.2rem;
+
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -1031,7 +1043,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .comic-button:active {
-  background-color: var(--backdrop);
+  background-color: var(--active);
   box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0em 0em var(--button);
   transform: translateY(0.2em);
 }
@@ -1067,7 +1079,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .link-button:active {
-  background-color: var(--backdrop);
+  background-color: var(--active);
   box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0em 0em var(--button);
   transform: translateY(0.2em);
 }
@@ -1104,19 +1116,25 @@ uncomment this part if you haven't added this code anywhere else
   /* CSS for arrow buttons */
   .prev, .next {
     position: absolute;
-    top: 46%;
+    top: 50%;
+    transform: translateY(-50%);
     padding: 0.8em;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
     transition: all 0.2s ease;
-    margin-left: 1rem;
+
 
     border-radius:0.5rem;
     color: var(--marin);
     background-color: #fff;
     border:0.1rem solid var(--button);
-    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.2em 0em var(--button);
+  }
+
+  .prev {
+    left: 1rem;
+
   }
 
   .next {
@@ -1125,7 +1143,7 @@ uncomment this part if you haven't added this code anywhere else
     color: var(--marin);
     background-color: #fff;
     border:0.1rem solid var(--button);
-    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.2em 0em var(--button);
   }
 
   /* CSS for hover effect on arrow buttons */
@@ -1134,8 +1152,17 @@ uncomment this part if you haven't added this code anywhere else
     border-radius: 100px;
     color: var(--marin);
     border:0.1rem solid var(--button);
+
+box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.2em 0em var(--button);
+    border-radius:0.5rem;
+  }
+
+  .prev:active, .next:active {
+    background-color: var(--active);
     box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
-    transform: translateY(-0.2em);
+    box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+
+
     border-radius:0.5rem;
   }
 
@@ -1266,6 +1293,12 @@ uncomment this part if you haven't added this code anywhere else
   opacity: 1;
 
 }
+
+.grid-block-item img{
+  filter: blur(3rem) saturate(1.5);
+
+}
+
 
 .text-overlay {
   font-family: "Schibsted Grotesk", sans-serif;
@@ -1441,6 +1474,34 @@ uncomment this part if you haven't added this code anywhere else
   width: 100%;
   height: 100%;
 }
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
+  margin: 2rem 8rem 2rem 8rem;
+  align-content: space-between; /* Distribute extra space evenly between grid items */
+
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius:1rem;
+  border:0.1rem solid var(--button);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.image-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 
