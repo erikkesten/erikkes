@@ -25,6 +25,14 @@
        url('fonts/Redaction10-Bold.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'ClashGrotesk';
+  src: local('☺'),
+       url('fonts/ClashGrotesk-Medium.otf') format('opentype');
+}
+
+
+
 
 .schibsted-grotesk-<uniquifier> {
   font-family: "Schibsted Grotesk", sans-serif;
@@ -52,7 +60,7 @@
 html{
   scrollbar-color: var(--marin) var(--backdrop);
   scroll-behavior: smooth;
-  scroll-padding: 2.5rem;
+  scroll-padding: 1.5rem;
 }
 
 
@@ -163,6 +171,7 @@ h1{
   font-variation-settings: "wght"625;
 }
 
+
 h2{
   font-family: "Schibsted Grotesk", sans-serif;
   color: var(--background);
@@ -199,7 +208,7 @@ a{
 
 p{
   font-family: "Schibsted Grotesk", sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0px;
   color: var(--text);
   line-height: 1.4;
@@ -246,10 +255,12 @@ hr{
   display: flex;
   flex: 1 1 0%;
   overflow-x: hidden;
-  box-shadow: rgba(0, 0, 0, 0.15) 0em -0.3em 0em inset, rgba(61, 87, 145, 1) 0em 0.3em 0em inset;
+  box-shadow: rgba(0, 0, 0, 0.15) 0em -0.6em 0em inset, rgba(61, 87, 145, 1) 0em 0.3em 0em inset;
 
 
 }
+
+
 
 .header {
   display: flex;
@@ -266,7 +277,7 @@ hr{
   margin:0 auto;
   padding-top: 16px;
   padding-bottom: 16px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.8em 0em inset, rgba(0, 0, 0, 0.1) 0em 0.3em 0em inset;
 
 }
 
@@ -277,10 +288,10 @@ hr{
   border-width: 0.1em;
   width: 64%;
   margin:0 auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
   border-color: var(--text);
-  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+
 }
 
 
@@ -303,7 +314,7 @@ hr{
   padding-top: 20px;
   padding-bottom: 20px;
 
-  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0em -0.8em 0em inset;
 }
 
 
@@ -1091,7 +1102,7 @@ uncomment this part if you haven't added this code anywhere else
 /* CSS for the slider container */
   .slider-container {
     position: relative;
-    width: 92%;
+    width: 82%;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
@@ -1187,7 +1198,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.2em 0em var(--button)
 .programs p{
   color: var(--title);
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: left;
 }
 
@@ -1207,6 +1218,19 @@ box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.2em 0em var(--button)
   align-content: space-between; /* Distribute extra space evenly between grid items */
   grid-auto-rows: minmax(10px, auto); /* Set minimum and maximum row height */
 }
+
+.grid-photos{
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+
+  margin: 2rem 8rem 2rem 8rem;
+  align-content: space-between; /* Distribute extra space evenly between grid items */
+  grid-auto-rows: minmax(10px, auto); /* Set minimum and maximum row height */
+  place-items: center;
+
+}
+
+
 
 .grid-item {
   position: relative;
@@ -1819,6 +1843,10 @@ display:inline-block;
     margin: 2rem 1rem 2rem 1rem;
   }
 
+  .grid-photos{
+    margin: 2rem 1rem 2rem 1rem;
+  }
+
   .comic-button {
     padding: 0.6rem 1.5rem;
     font-size: 1.5rem;
@@ -1841,6 +1869,11 @@ display:inline-block;
   .txt{
     padding-right: 4rem;
     padding-left: 4rem;
+  }
+  .slider-container {
+    width: 92%;
+
+
   }
 
 
@@ -2053,6 +2086,62 @@ display:inline-block;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
+
+.index-block-item h2{
+  margin-bottom: 0.5rem
+}
+
+.index-block-item p{
+  color: var(--backdrop);
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 0.6rem;
+
+  text-align: left;
+}
+
+
+.index-block-item {
+  background-color: var(--card);
+  position: relative;
+  overflow: hidden;
+  border-radius:1rem;
+  border:0.1rem solid var(--button);
+  display: flex;
+  height: 16rem;
+  width: 19rem;
+
+}
+
+.overlay p{
+display:inline-block;
+}
+
+.overlay ul{
+  margin-left: 1.25rem;
+}
+.overlay li{
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+}
+
+
+
+.overlay h2{
+  color: var(--backdrop);
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
+
+  text-align: left;
+
+
+}
+
 
 
 }
