@@ -1417,10 +1417,12 @@ box-shadow: rgba(0, 0, 0, 0.1) 0em -0.3em 0em inset, 0em 0.2em 0em var(--button)
   border:0.1rem solid rgba(255, 255, 255, 0.3);
   background-color: rgba(0,0,0,0.15);
   backdrop-filter: blur(0.4rem);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   letter-spacing: -.025em;
-
 }
+
+
+
 
 .icons{
   width:2rem;
@@ -1853,7 +1855,7 @@ display:inline-block;
     margin-right:0.5rem;
     margin-left:0.5rem;
     margin-top: 0.5rem;
-    margin-bottom: -1rem;
+    margin-bottom: -0.5rem;
   }
 
   .headington-item {
@@ -2031,7 +2033,7 @@ display:inline-block;
   .button{
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
 
@@ -2206,7 +2208,7 @@ display:inline-block;
     margin-right:0.5rem;
     margin-left:0.5rem;
     margin-top: 0rem;
-    margin-bottom: -1rem;
+    margin-bottom: -0.5rem;
   }
 
 }
