@@ -282,6 +282,8 @@ hr{
 }
 
 
+
+
 .main {
   background-color: var(--background);
   border-style: none solid solid;
@@ -936,6 +938,17 @@ uncomment this part if you haven't added this code anywhere else
     padding: 0.2rem;
 
 }
+
+
+
+.main-photo{
+  margin-top:1rem;
+  vertical-align: middle;
+  width: 98%;
+
+
+}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 960px) {
