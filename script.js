@@ -1,51 +1,48 @@
-// function([string1, string2],target id,[color1,color2])    
- consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text',['tomato','rebeccapurple','lightblue']);
+// https://github.com/ashthornton/asscroll
+import ASScroll from 'https://cdn.skypack.dev/@ashthornton/asscroll'
 
-function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
-  var visible = true;
-  var con = document.getElementById('console');
-  var letterCount = 1;
-  var x = 1;
-  var waiting = false;
-  var target = document.getElementById(id)
-  target.setAttribute('style', 'color:' + colors[0])
-  window.setInterval(function() {
+const pageEl = document.querySelector('.page')
 
-    if (letterCount === 0 && waiting === false) {
-      waiting = true;
-      target.innerHTML = words[0].substring(0, letterCount)
-      window.setTimeout(function() {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
-        var usedWord = words.shift();
-        words.push(usedWord);
-        x = 1;
-        target.setAttribute('style', 'color:' + colors[0])
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (letterCount === words[0].length + 1 && waiting === false) {
-      waiting = true;
-      window.setTimeout(function() {
-        x = -1;
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (waiting === false) {
-      target.innerHTML = words[0].substring(0, letterCount)
-      letterCount += x;
-    }
-  }, 120)
-  window.setInterval(function() {
-    if (visible === true) {
-      con.className = 'console-underscore hidden'
-      visible = false;
+const asscroll = new ASScroll({
+    // containerElement: '.my-container',
+    scrollElements: pageEl,
+    ease: 0.1,
+    touchEase: 1,
+    customScrollbar: true,
+    scrollbarEl: '.my-scrollbar',
+    scrollbarHandleEl: '.my-scrollbar-handle',
+    scrollbarStyles: true,
+    disableNativeScrollbar: true,
+    touchScrollType: 'scrollTop',
+    disableRaf: true,
+    disableResize: true,
+    limitLerpRate: true,
+    blockScrollClass: '.asscroll-block'
+})
 
-    } else {
-      con.className = 'console-underscore'
+window.addEventListener('load', () => {
+    asscroll.enable()
+    maxScrollEl.textContent = asscroll.maxScroll
+})
 
-      visible = true;
-    }
-  }, 400)
+function onRaf() {
+    asscroll.update()
+    requestAnimationFrame(onRaf)
 }
+requestAnimationFrame(onRaf)
+
+window.addEventListener('resize', () => {
+    const width = window.innerWidth
+    const height = window.innerHeight
+    asscroll.resize({ width, height})
+    maxScrollEl.textContent = asscroll.maxScroll
+})
+
+const targetPosEl = document.querySelector('[data-targetPos]')
+const currentPosEl = document.querySelector('[data-currentPos]')
+const maxScrollEl = document.querySelector('[data-maxScroll]')
+const scrollEndEl = document.querySelector('[data-scrollEnd]')
+
+asscroll.on('scroll', scrollPos => targetPosEl.textContent = scrollPos)
+asscroll.on('scrollEnd', scrollPos => scrollEndEl.textContent = scrollPos)
+asscroll.on('update', ({ currentPos }) => currentPosEl.textContent = currentPos)
