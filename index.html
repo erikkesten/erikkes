@@ -30,6 +30,7 @@ erikkes | Home
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <script>
     window.onload = function() {
@@ -100,13 +101,47 @@ erikkes | Home
 
 <hr>
 
-  <div id="showcase">
+
     <h1>QUICK LOOK</h1>
     <br>
+
+
+<div class="sliderWrapper">
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/work/rem.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/photos/winner.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/work/viv.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/photos/field.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/work/rec.jpg">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+</div>
+
+
+  <!---
   <div class="slider-container">
     <div class="slider-images">
     <img class="slider-image" src="img/work/chubu-m.jpg" alt="Image 1">
-    <img class="slider-image" src="img/photos/bus.jpg" alt="Image 2">
+    <img class="slider-image" src="img/work/chubu-m.jpg" alt="Image 2">
     <img class="slider-image" src="img/interface/ui2.jpg" alt="Image 3">
     <img class="slider-image" src="img/work/icondev.jpg" alt="Image 3">
     <img class="slider-image" src="img/photos/football.jpg" alt="Image 5">
@@ -114,10 +149,12 @@ erikkes | Home
     <img class="slider-image" src="img/work/skinbid-concept.jpg" alt="Image 7">
     <img class="slider-image" src="img/photos/field.jpg" alt="Image 7">
     </div>
-    <!-- Arrow buttons -->
+
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
+
+-->
 
           <hr>
 
@@ -377,6 +414,116 @@ erikkes | Home
 
 
 <script>
+//current position
+var pos = 0;
+//number of slides
+var totalSlides = $('#slider-wrap ul li').length;
+//get the slide width
+var sliderWidth = $('#slider-wrap').width();
+
+
+$(document).ready(function(){
+
+
+	/*****************
+	 BUILD THE SLIDER
+	*****************/
+	//set width to be 'x' times the number of slides
+	$('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
+
+    //next slide
+	$('#next').click(function(){
+		slideRight();
+	});
+
+	//previous slide
+	$('#previous').click(function(){
+		slideLeft();
+	});
+
+
+
+	/*************************
+	 //*> OPTIONAL SETTINGS
+	************************/
+	//automatic slider
+	var autoSlider = setInterval(slideRight, 3000);
+
+	//for each slide
+	$.each($('#slider-wrap ul li'), function() {
+	   //set its color
+	   var c = $(this).attr("data-color");
+	   $(this).css("background",c);
+
+	   //create a pagination
+	   var li = document.createElement('li');
+	   $('#pagination-wrap ul').append(li);
+	});
+
+	//counter
+	countSlides();
+
+	//pagination
+	pagination();
+
+	//hide/show controls/btns when hover
+	//pause automatic slide when hover
+	$('#slider-wrap').hover(
+	  function(){ $(this).addClass('active'); clearInterval(autoSlider); },
+	  function(){ $(this).removeClass('active'); autoSlider = setInterval(slideRight, 3000); }
+	);
+
+
+
+});//DOCUMENT READY
+
+
+
+/***********
+ SLIDE LEFT
+************/
+function slideLeft(){
+	pos--;
+	if(pos==-1){ pos = totalSlides-1; }
+	$('#slider-wrap ul#slider').css('left', -(sliderWidth*pos));
+
+	//*> optional
+	countSlides();
+	pagination();
+}
+
+
+/************
+ SLIDE RIGHT
+*************/
+function slideRight(){
+	pos++;
+	if(pos==totalSlides){ pos = 0; }
+	$('#slider-wrap ul#slider').css('left', -(sliderWidth*pos));
+
+	//*> optional
+	countSlides();
+	pagination();
+}
+
+
+
+
+/************************
+ //*> OPTIONAL SETTINGS
+************************/
+function countSlides(){
+	$('#counter').html(pos+1 + ' / ' + totalSlides);
+}
+
+function pagination(){
+	$('#pagination-wrap ul li').removeClass('active');
+	$('#pagination-wrap ul li:eq('+pos+')').addClass('active');
+}
+</script>
+
+<!---
+<script>
   var slideIndex = 0;
   showSlides();
 
@@ -393,6 +540,7 @@ erikkes | Home
     document.querySelector('.slider-images').style.transform = `translateX(${newPosition}%)`;
   }
 </script>
+--->
 
 
 <script type="text/javascript" src="vanilla-tilt.js"></script>
@@ -478,6 +626,37 @@ window.onscroll = function() {
   }
 };
 </script>
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<!-- Initialize Swiper -->
+<script>
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+  const progressContent = document.querySelector(".autoplay-progress span");
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", 1 - progress);
+
+      }
+    }
+  });
+</script>
+
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

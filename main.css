@@ -1281,9 +1281,8 @@ uncomment this part if you haven't added this code anywhere else
 
 
 
+/*
 
-
-/* CSS for the slider container */
   .slider-container {
     position: relative;
     max-width: 100%;
@@ -1295,10 +1294,10 @@ uncomment this part if you haven't added this code anywhere else
 
   }
 
-  /* CSS for the slider images */
+
   .slider-images {
     display:flex;
-    transition: transform 0.5s ease; /* Simple animation when scrolling to the next image */
+    transition: transform 0.5s ease;
   }
 
   .slider-image {
@@ -1307,7 +1306,7 @@ uncomment this part if you haven't added this code anywhere else
     object-fit: cover;
   }
 
-  /* CSS for arrow buttons */
+
   .prev, .next {
     position: absolute;
     top: 50%;
@@ -1340,7 +1339,7 @@ uncomment this part if you haven't added this code anywhere else
 
   }
 
-  /* CSS for hover effect on arrow buttons */
+
   .prev:hover, .next:hover {
     background-color: #fff;
     border-radius: 100px;
@@ -1354,6 +1353,231 @@ uncomment this part if you haven't added this code anywhere else
     background-color: var(--active);
     border-radius:0.5rem;
   }
+
+  */
+
+
+  .swiper {
+    height: 80%;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  .autoplay-progress {
+    position: absolute;
+    right: 1rem;
+    top: 1.4rem;
+    z-index: 10;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    font-family: "ClashGrotesk-Medium", sans-serif;
+  }
+
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--bg);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+
+
+  .swiper-pagination{
+    top: 2rem !important;
+
+  }
+
+
+  :root {
+
+    --swiper-pagination-color: var(--bg);
+    --swiper-pagination-bullet-width: 1.5rem;
+    --swiper-pagination-bullet-height: 0.6rem;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+    --swiper-pagination-bullet-vertical-gap: 0.5rem;
+    --swiper-pagination-bullet-border-radius: 1rem;
+
+  }
+
+
+
+  #slider-wrap{
+    position: relative;
+    width:100%;
+  	height:400px;
+    list-style: none;
+    margin: auto;
+    overflow: hidden;
+    border-radius:1rem;
+    border:0.1rem solid var(--bord);
+  }
+
+  #slider-wrap ul#slider{
+    list-style: none;
+  	position:absolute;
+  	top:0;
+  	left:0;
+  }
+
+
+
+  #slider-wrap ul#slider li{
+    list-style: none;
+  	float:left;
+  	position:relative;
+  	width:100%;
+  	height:400px;
+
+  }
+
+
+
+  #slider img{
+    object-fit: cover; /* Cover  means that the img will fill the box and preserve its aspect ratio  */
+
+    max-width: 100%;
+    max-height: 100%;
+
+
+}
+
+  }
+
+
+
+
+
+  #slider-wrap ul#slider li i{
+  	text-align:center;
+  	line-height:400px;
+  	display:block;
+  	width:100%;
+  	font-size:90px;
+  }
+
+
+  /*btns*/
+  .btns{
+  	position:absolute;
+  	width:50px;
+  	height:60px;
+  	top:50%;
+  	margin-top:-25px;
+  	line-height:57px;
+  	text-align:center;
+  	cursor:pointer;
+  	background:rgba(0,0,0,0.1);
+  	z-index:100;
+
+
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-khtml-user-select: none;
+  	-ms-user-select: none;
+
+  	-webkit-transition: all 0.1s ease;
+  	-moz-transition: all 0.1s ease;
+  	-o-transition: all 0.1s ease;
+  	-ms-transition: all 0.1s ease;
+  	transition: all 0.1s ease;
+  }
+
+  .btns:hover{
+  	background:rgba(0,0,0,0.3);
+  }
+
+  #next{right:-50px; border-radius:7px 0px 0px 7px;}
+  #previous{left:-50px; border-radius:0px 7px 7px 7px;}
+  #counter{
+    font-family: "SpaceGrotesk-Bold", sans-serif;
+  	top: 30px;
+  	right:35px;
+  	width:auto;
+  	position:absolute;
+  }
+
+  #slider-wrap.active #next{right:0px;}
+  #slider-wrap.active #previous{left:0px;}
+
+
+  /*bar*/
+  #pagination-wrap{
+  	min-width:20px;
+  	margin-top:350px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	height:15px;
+  	position:relative;
+  	text-align:center;
+  }
+
+  #pagination-wrap ul {
+  	width:100%;
+  }
+
+  #pagination-wrap ul li{
+  	margin: 0 4px;
+  	display: inline-block;
+  	width:5px;
+  	height:5px;
+  	border-radius:50%;
+  	background:#fff;
+  	opacity:0.5;
+  	position:relative;
+    top:0;
+  }
+
+  #pagination-wrap ul li.active{
+    width:12px;
+    height:12px;
+    top:3px;
+  	opacity:1;
+  	box-shadow:rgba(0,0,0,0.1) 1px 1px 0px;
+  }
+
+  /*ANIMATION*/
+  #slider-wrap ul, #pagination-wrap ul li{
+  	-webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  	-moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  	-o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  	-ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  	transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  }
+
+
+
+
+
+
 
 .holy-box{
   display: flex;
@@ -2032,6 +2256,15 @@ display:inline-block;
 
 }
 
+@media(max-width:1640px) {
+  .swiper {
+    height: 80%;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+}
+
 @media(max-width:1280px) {
 
   .header {
@@ -2055,6 +2288,12 @@ display:inline-block;
   .txt{
     padding-right: 8rem;
     padding-left: 8rem;
+  }
+
+  .swiper {
+    height: 80%;
+    width: 100%;
+    border-radius: 1rem;
   }
 
 
@@ -2120,6 +2359,11 @@ display:inline-block;
 
 
   }
+  .swiper {
+    height: 60%;
+    width: 100%;
+    border-radius: 1rem;
+  }
 
 
 }
@@ -2136,6 +2380,11 @@ display:inline-block;
   }
   .button{
     margin-bottom: 0.5rem;
+  }
+  .swiper {
+    height: 55%;
+    width: 100%;
+    border-radius: 1rem;
   }
 
 
@@ -2184,6 +2433,11 @@ display:inline-block;
     padding-right: 3rem;
     padding-left: 3rem;
   }
+  .swiper {
+    height: 50%;
+    width: 100%;
+    border-radius: 1rem;
+  }
 
 }
 
@@ -2210,6 +2464,12 @@ display:inline-block;
   .heading svg{
     width: 2.25rem;
     margin-right: 0.4rem;
+  }
+
+  .swiper {
+    height: 45%;
+    width: 100%;
+    border-radius: 1rem;
   }
 
 }
@@ -2394,6 +2654,12 @@ display:inline-block;
 
 }
 
+.swiper {
+  height: 38%;
+  width: 100%;
+  border-radius: 1rem;
+}
+
 
 
 }
@@ -2460,5 +2726,18 @@ display:inline-block;
     margin-top: 0rem;
     margin-bottom: -0.5rem;
   }
+  .swiper {
+    height: 30%;
+    width: 100%;
+    border-radius: 1rem;
+  }
 
+}
+
+@media(max-width:420px) {
+  .swiper {
+    height: 25%;
+    width: 100%;
+    border-radius: 1rem;
+  }
 }
