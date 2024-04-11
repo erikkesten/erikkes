@@ -108,22 +108,22 @@ erikkes | Home
 
 <div class="sliderWrapper">
     <!-- Swiper -->
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper" id="container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="img/work/rem.jpg">
+          <img src="img/slider/vivid.jpg" id="image">
         </div>
         <div class="swiper-slide">
-          <img src="img/photos/winner.jpg">
+          <img src="img/slider/ream.jpg" id="image">
         </div>
         <div class="swiper-slide">
-          <img src="img/work/viv.jpg">
+          <img src="img/slider/major.jpg" id="image">
         </div>
         <div class="swiper-slide">
-          <img src="img/photos/field.jpg">
+          <img src="img/slider/ecstatic.jpg" id="image">
         </div>
         <div class="swiper-slide">
-          <img src="img/work/rec.jpg">
+          <img src="img/slider/chubu.jpg" id="image">
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -655,6 +655,27 @@ window.onscroll = function() {
       }
     }
   });
+</script>
+
+<script>
+    // Function to set container height based on image width
+    function setContainerHeight() {
+        var container = document.getElementById("container");
+        var image = document.getElementById("image");
+        var aspectRatio = 21 / 9; // Desired aspect ratio
+
+        // Calculate height based on image width and aspect ratio
+        var imageWidth = image.width;
+        var containerHeight = imageWidth / aspectRatio;
+
+        // Set container height
+        container.style.height = containerHeight + "px";
+    }
+
+    // Call the function when the image has loaded
+    window.onload = setContainerHeight;
+    // Call the function when the window is resized
+    window.onresize = setContainerHeight;
 </script>
 
 

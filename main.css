@@ -1358,7 +1358,6 @@ uncomment this part if you haven't added this code anywhere else
 
 
   .swiper {
-    height: 80%;
     width: 100%;
     border-radius: 1rem;
   }
@@ -1372,8 +1371,8 @@ uncomment this part if you haven't added this code anywhere else
   .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 
   }
 
@@ -1400,8 +1399,8 @@ uncomment this part if you haven't added this code anywhere else
     width: 100%;
     height: 100%;
     stroke-width: 4px;
-    stroke: var(--bg);
-    fill: none;
+    stroke: var(--crystal);
+    fill: rgba(0, 0, 0, 0.2);
     stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
@@ -1416,7 +1415,7 @@ uncomment this part if you haven't added this code anywhere else
 
   :root {
 
-    --swiper-pagination-color: var(--bg);
+    --swiper-pagination-color: var(--crystal);
     --swiper-pagination-bullet-width: 1.5rem;
     --swiper-pagination-bullet-height: 0.6rem;
     --swiper-pagination-bullet-inactive-color: #000;
@@ -2256,14 +2255,6 @@ display:inline-block;
 
 }
 
-@media(max-width:1640px) {
-  .swiper {
-    height: 80%;
-    width: 100%;
-    border-radius: 1rem;
-  }
-
-}
 
 @media(max-width:1280px) {
 
@@ -2290,11 +2281,7 @@ display:inline-block;
     padding-left: 8rem;
   }
 
-  .swiper {
-    height: 80%;
-    width: 100%;
-    border-radius: 1rem;
-  }
+
 
 
 }
@@ -2359,11 +2346,7 @@ display:inline-block;
 
 
   }
-  .swiper {
-    height: 60%;
-    width: 100%;
-    border-radius: 1rem;
-  }
+
 
 
 }
@@ -2381,11 +2364,7 @@ display:inline-block;
   .button{
     margin-bottom: 0.5rem;
   }
-  .swiper {
-    height: 55%;
-    width: 100%;
-    border-radius: 1rem;
-  }
+
 
 
 }
@@ -2433,11 +2412,7 @@ display:inline-block;
     padding-right: 3rem;
     padding-left: 3rem;
   }
-  .swiper {
-    height: 50%;
-    width: 100%;
-    border-radius: 1rem;
-  }
+
 
 }
 
@@ -2466,11 +2441,7 @@ display:inline-block;
     margin-right: 0.4rem;
   }
 
-  .swiper {
-    height: 45%;
-    width: 100%;
-    border-radius: 1rem;
-  }
+
 
 }
 
@@ -2654,11 +2625,6 @@ display:inline-block;
 
 }
 
-.swiper {
-  height: 38%;
-  width: 100%;
-  border-radius: 1rem;
-}
 
 
 
@@ -2726,18 +2692,6 @@ display:inline-block;
     margin-top: 0rem;
     margin-bottom: -0.5rem;
   }
-  .swiper {
-    height: 30%;
-    width: 100%;
-    border-radius: 1rem;
-  }
 
-}
 
-@media(max-width:420px) {
-  .swiper {
-    height: 25%;
-    width: 100%;
-    border-radius: 1rem;
-  }
 }
