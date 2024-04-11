@@ -371,15 +371,22 @@ requestAnimationFrame(raf)
 
 <script>
 let prevScrollpos = window.pageYOffset;
+const navbar = document.getElementById("navbar");
+
 window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
+  const currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").classList.remove('hidden');
+    navbar.classList.remove("hidden");
   } else {
-    document.getElementById("navbar").classList.add('hidden');
+    navbar.classList.add("hidden");
   }
   prevScrollpos = currentScrollPos;
-}
+
+  // Show navbar when user is at the top of the page
+  if (window.scrollY === 0) {
+    navbar.classList.remove("hidden");
+  }
+};
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
