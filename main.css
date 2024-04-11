@@ -105,7 +105,7 @@
 }
 
 html{
-  scrollbar-color: var(--marin) var(--backdrop);
+  scrollbar-color: var(--crystal) var(--bg);
 
   scroll-padding: 1.5rem;
 }
