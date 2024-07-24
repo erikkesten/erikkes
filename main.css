@@ -1676,9 +1676,17 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:1rem;
   border:0.1rem solid var(--bord);
   display: flex;
-
+  cursor: pointer;
   box-shadow: 0px 10px 15px -6px rgba(0,0,0,0.2);
   transition: box-shadow .25s;
+}
+
+.de-cursor{
+    cursor:default;
+}
+
+.no-cursor{
+    cursor:none;
 }
 
 .grid-item:hover {
