@@ -169,7 +169,7 @@ body{
   left: 0;
   width: 100%;
   transition: top 1s;
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 99; /* Ensure it's above other content */
 }
 
 .navbar.hidden {
@@ -2188,36 +2188,69 @@ display:inline-block;
 
 
 
+body.modal-open {
+    overflow: hidden;
+}
+
 /* Style for the modal */
+/* Style the Image Used to Trigger the Modal */
+img {
+    border-radius: 5px;
+}
+
+
+/* The Modal (background) */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  overflow: auto;
-  justify-content: center;
-  align-items: center;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 4rem; /* Location of the box */
+
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+/* Modal Content (Image) */
 .modal-content {
-  max-width: 98%;
-  max-height: 98%;
-  border-radius:1rem;
-  border:0.1rem solid #000;
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 96%;
+    height: auto;
+    max-height: 80%;
+
 }
 
+/* Add Animation - Zoom in the Modal */
+.modal-content{
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+
+/* The Close Button */
 .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
+    position: fixed;
+    z-index: 99; /* Ensure it's above other content */
+    bottom: 2rem;
+    left: 50%;
+    color: #f1f1f1;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -2320,6 +2353,22 @@ display:inline-block;
     grid-auto-rows: minmax(1rem, auto); /* Set minimum and maximum row height */
   }
 
+  .nav a{
+    margin-left:1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .header svg{
+    width:3rem;
+    height:3rem;
+    margin-bottom: 0px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+  }
+
+
+
   .grid-other {
 
     grid-template-columns: repeat(2, auto);
@@ -2400,6 +2449,7 @@ display:inline-block;
 
   }
 
+
   .hero-heading{
     font-size: 2.5rem;
     margin-top: 4rem;
@@ -2440,6 +2490,7 @@ display:inline-block;
 }
 
 @media(max-width:720px) {
+
 
 
   .yt {
@@ -2492,9 +2543,20 @@ display:inline-block;
   .grid-other {
 
     grid-template-columns: repeat(1, auto);
+  }
+
+  .modal {
+      padding-top: 4rem; /* Location of the box */
 
   }
 
+  .header svg{
+    width:2rem;
+    height:2rem;
+    margin-bottom: 0px;
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
 
 
   .index-block {
@@ -2549,12 +2611,9 @@ display:inline-block;
 
   .nav a{
     margin-left:1rem;
+    font-size: 1rem;
   }
 
-  a{
-    font-size: 1.5rem;
-
-  }
 
   p{
       font-size: 16px;
@@ -2687,9 +2746,9 @@ display:inline-block;
 
 
   .nav a{
-    font-size: 1.4rem;
-  }
-  .nav i{
+    margin-left:1rem;
+
+    font-size: 1rem;
   }
 
   .logo{
