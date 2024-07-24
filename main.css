@@ -1676,7 +1676,7 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:1rem;
   border:0.1rem solid var(--bord);
   display: flex;
-  cursor: pointer;
+
   box-shadow: 0px 10px 15px -6px rgba(0,0,0,0.2);
   transition: box-shadow .25s;
 }
@@ -2182,6 +2182,15 @@ display:inline-block;
 
 
 
+
+.zoom {
+  transition: transform .6s; /* Animation */
+
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
 
 
