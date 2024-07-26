@@ -670,7 +670,7 @@ padding-left: 1rem;
   margin-right:0.5rem;
   margin-left:0.5rem;
   margin-top: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.15) 0em -0.35em 0em inset, rgba(255, 255, 255, 0.5) 0em 0.35em 0em inset;
+
 
   font-size: 1rem;
   color: var(--bg);
@@ -1635,6 +1635,18 @@ uncomment this part if you haven't added this code anywhere else
 
 }
 
+.exp-container {
+  background-color: var(--boxed);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius:1rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+
+}
+
 .video-container {
   justify-content: center; /* Horizontally center the grid */
   align-items: center; /* Vertically center the grid */
@@ -2230,6 +2242,102 @@ display:inline-block;
 }
 
 
+.year{
+  float: left;
+}
+
+.recent{
+  float: right;
+  color: var(--backdrop) !important;
+  border-radius:5rem;
+  font-size: 0.8rem !important;
+  background-color: var(--recent);
+  padding: 0.2rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+/* EXPERIENCE */
+
+
+
+.exp-block-item {
+  position: relative;
+  overflow: hidden;
+  border-radius:1rem;
+  border:0.1rem solid var(--bord);
+  background-color: var(--crystal);
+
+  transition: box-shadow .25s;
+  padding: 1.3rem;
+}
+
+.exp-block-item h2{
+  color: var(--text);
+  margin: 0;
+  font-size: 1.4rem;
+
+  text-align: left;
+}
+
+.exp-block-item h3{
+  color: var(--text);
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+
+.exp-block-item p{
+  color: var(--text);
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+.exp-block-item:hover p{
+  opacity: 1;
+
+}
+
+.exp-block-item ul{
+  padding: 0;
+}
+
+.exp-block-item li{
+  color: var(--text);
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+
+.exp-block-item:hover li{
+  opacity: 1;
+
+}
+
+.exp-block-item img{
+  filter: blur(3rem) saturate(1.5);
+
+}
+
+
+.exp-block-item:hover{
+  box-shadow: 0px 20px 20px -3px rgba(0,0,0,0.2);
+}
+
+
+/* EXPERIENCE */
+
+
 
 /* EDUCATION */
 
@@ -2262,20 +2370,6 @@ display:inline-block;
   display: inline-block;
 }
 
-.year{
-  float: left;
-}
-
-.recent{
-  float: right;
-  color: var(--backdrop) !important;
-  border-radius:5rem;
-  font-size: 0.8rem !important;
-  background-color: var(--recent);
-  padding: 0.2rem;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-}
 
 .ed-block-item p{
   color: var(--text);
@@ -2287,8 +2381,27 @@ display:inline-block;
   margin-bottom: 0.2rem;
   text-align: left;
 }
-
 .ed-block-item:hover p{
+  opacity: 1;
+
+}
+
+.ed-block-item ul{
+  padding: 0;
+}
+
+.ed-block-item li{
+  color: var(--text);
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+
+.ed-block-item:hover li{
   opacity: 1;
 
 }
@@ -2310,6 +2423,13 @@ display:inline-block;
 .index-block {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  gap: 2rem;
+  margin: 0rem;
+}
+
+.exp-block {
+  display: grid;
+
   gap: 2rem;
   margin: 0rem;
 }
@@ -2841,12 +2961,19 @@ img {
 
 
 .overlay p{
-display:inline-block;
+
 }
 
 .overlay ul{
   margin-left: 1.25rem;
 }
+
+.ed-block-item li{
+
+  font-size: 1rem !important;
+
+}
+
 .overlay li{
   margin-top: 0.25rem;
   font-size: 0.75rem;

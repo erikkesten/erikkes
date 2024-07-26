@@ -110,6 +110,38 @@ erikkes | About
 
   <hr>
 
+  <div id="programs">
+  <h1>WORK EXPERIENCE</h1>
+  <p>My work experience in the field of Graphic Design</p>
+  <div class="exp-container">
+
+
+
+              <div class="exp-block-item">
+
+              <div class="exp-block">
+
+                <div class="overlay">
+                  <h3 class="recent">Most Recent</h3>
+                  <h3>April - June 2024</h3>
+                <h2>Graphics Designer</h2>
+                  <h3>Trimco Group &nbsp; | &nbsp; Intern</h3>
+                  <ul>
+                    <li>Creating sets of clothing hang tags, labels and trims for both a denim and a sports collection</li>
+                    <li>Changing measurements of different packaging attire to be production ready for brand such as Filippa K, Sebago, Dope etc.</li>
+                    <li>Creating concepts and ideas for different brands</li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+
+
+
+
+  </div>
+
+  </div>
+
 
   <div id="programs">
   <h1>EDUCATION</h1>
@@ -120,7 +152,7 @@ erikkes | About
               <div class="ed-block-item">
 
                 <div class="overlay">
-                                    <h3 class="recent">Most Recent</h3>
+                  <h3 class="recent">Most Recent</h3>
                   <h3>2023 - 2024</h3>
                 <h2>Graphics Design for Web</h2>
                   <p>#graphics #design #web #figma</p>
@@ -362,8 +394,16 @@ function closeModal() {
     "max-glare": 0.2,
   });
 
+  VanillaTilt.init(document.querySelectorAll(".exp-block-item"), {
+    max: 1,
+    speed: 800,
+    reverse: true,
+    glare: true,
+    "max-glare": 0.2,
+  });
+
   VanillaTilt.init(document.querySelectorAll(".ed-block-item"), {
-    max: 4,
+    max: 8,
     speed: 800,
     reverse: true,
     glare: true,
