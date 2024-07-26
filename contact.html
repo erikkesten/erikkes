@@ -30,6 +30,7 @@ erikkes | Contact
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <script>
     window.onload = function() {
@@ -97,20 +98,34 @@ erikkes | Contact
 
 
 
-<div class="grid-gal">
-
-  <div class="grid-item" onclick="openModal('img/gifs/airmax.gif')">
-    <img src="img/photos/arena.jpg" alt="Image 1">
-  </div>
-
-  <div class="grid-item" onclick="openModal('img/gifs/airmax.gif')">
-    <img src="img/photos/aleksib.jpg" alt="Image 1">
-  </div>
-
-  <div class="grid-item" onclick="openModal('img/gifs/airmax-dots.gif')">
-    <img src="img/photos/winner.jpg" alt="Image 1">
-  </div>
-
+<div class="sliderWrapper">
+    <!-- Swiper -->
+    <div class="swiper mySwiper" id="container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/slider/vivid.jpg" id="image">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/ream.jpg" id="image">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/major.jpg" id="image">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/ecstatic.jpg" id="image">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider/chubu.jpg" id="image">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
+      </div>
+    </div>
 </div>
 
 <hr>
@@ -194,7 +209,7 @@ function closeModal() {
   });
 
   VanillaTilt.init(document.querySelectorAll(".grid-item"), {
-  max: 4,
+  max: 8,
   speed: 800,
   reverse: true,
   glare: true,
@@ -249,6 +264,55 @@ window.onscroll = function() {
     navbar.classList.remove("hidden");
   }
 };
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<!-- Initialize Swiper -->
+<script>
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+  const progressContent = document.querySelector(".autoplay-progress span");
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", 1 - progress);
+
+      }
+    }
+  });
+</script>
+
+<script>
+    // Function to set container height based on image width
+    function setContainerHeight() {
+        var container = document.getElementById("container");
+        var image = document.getElementById("image");
+        var aspectRatio = 21 / 9; // Desired aspect ratio
+
+        // Calculate height based on image width and aspect ratio
+        var imageWidth = image.width;
+        var containerHeight = imageWidth / aspectRatio;
+
+        // Set container height
+        container.style.height = containerHeight + "px";
+    }
+
+    // Call the function when the image has loaded
+    window.onload = setContainerHeight;
+    // Call the function when the window is resized
+    window.onresize = setContainerHeight;
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

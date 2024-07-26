@@ -99,6 +99,14 @@ erikkes | Home
             </div>
   </div>
 
+  <div class="center">
+    <ul class="cent-nav">
+      <li><a onclick="window.open('https://www.behance.net/erikkesten/' + location.search)"><i class="fa-brands fa-behance fa-xs"></i>Behance</a></li>
+      <li><a onclick="window.open('https://www.youtube.com/@erikkesten6079' + location.search)"><i class="fa-brands fa-youtube fa-xs"></i>YouTube</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope fa-xs"></i>Contact</a></li>
+    </ul>
+  </div>
+
 <hr>
 
 
@@ -168,6 +176,8 @@ erikkes | Home
   <h1>GALLERY  <a href="galleryV2.html">More+</a></h1>
 
   <p>Showcasing a selection of my work and concepting</p>
+
+<div class="parent-container">
 
 <div class="grid-container">
   <div class="grid-item" onclick="window.open('https://www.behance.net/gallery/191980227/Prototype-for-Record-Label-website' + location.search)">
@@ -262,6 +272,8 @@ erikkes | Home
   <li>HTML</li>
   <li>CSS</li>
 </ul>
+</div>
+
 </div>
 
 
@@ -578,7 +590,7 @@ function pagination(){
   });
 
   VanillaTilt.init(document.querySelectorAll(".grid-item"), {
-  max: 4,
+  max: 8,
   speed: 800,
   reverse: true,
   glare: true,

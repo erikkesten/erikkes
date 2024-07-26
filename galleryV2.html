@@ -90,7 +90,7 @@ erikkes | Gallery
 
   <h1>GRAPHICS</h1>
 
-
+<div class="parent-container">
 <div class="grid-container">
   <div class="grid-item" onclick="window.open('https://www.behance.net/gallery/191980227/Prototype-for-Record-Label-website' + location.search)">
 
@@ -176,7 +176,7 @@ erikkes | Gallery
   <img src="img/work/mjolk-op.jpg" alt="Image 1">
   <div class="dark-overlay">
   <p>🐄 Milk package concept</p>
-  <ul class="overlay-list">
+  <ul class="project-list">
     <li>View more</li>
     <ol>&#10095;</ol>
   </ul>
@@ -189,7 +189,7 @@ erikkes | Gallery
 <img src="img/work/mouse-brollan.jpg" alt="Image 1">
 <div class="dark-overlay">
 <p>🎮 MOUZ Social media post</p>
-<ul class="overlay-list">
+<ul class="project-list">
   <li>View more</li>
   <ol>&#10095;</ol>
 </ul>
@@ -199,25 +199,44 @@ erikkes | Gallery
 
 </div>
 
+<div class="center">
+  <ul class="cent-nav">
+    <li><a onclick="window.open('https://www.behance.net/erikkesten/' + location.search)"><i class="fa-brands fa-behance fa-xs"></i>Behance Profile</a></li>
+  </ul>
+</div>
+
+</div>
 
 
-          <hr>
+
 
   <h1>VIDEOS</h1>
 
-  <div class="grid-videos">
-    <div class="grid-item">
-      <iframe width="100%" height="400" src="https://www.youtube.com/embed/rBTfBLNdzg8?si=bIfRdZnYZsW16giz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div class="grid-item">
-      <iframe width="100%" height="400" src="https://www.youtube.com/embed/i21GZnh3lss?si=tescH27c-GWI63Jl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  </div>
+  <div class="video-container">
 
-        <hr>
+<div class="video-content">
+
+      <iframe class="grid-video" src="https://www.youtube.com/embed/rBTfBLNdzg8?si=bIfRdZnYZsW16giz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+      <iframe class="grid-video" src="https://www.youtube.com/embed/i21GZnh3lss?si=tescH27c-GWI63Jl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</div>
+
+      <div class="center">
+        <ul class="cent-nav">
+          <li><a onclick="window.open('https://www.youtube.com/@erikkesten6079' + location.search)"><i class="fa-brands fa-youtube fa-xs"></i>YouTube Channel</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
 
         <h1>PHOTOS</h1>
 
+
+<div class="parent-container">
         <div class="grid-gal">
 
           <div class="grid-item de-cursor">
@@ -257,13 +276,22 @@ erikkes | Gallery
             <img src="img/photos/ramlösa.jpg"  class="zoom">
           </div>
 
-
         </div>
 
-<hr>
+        <div class="center">
+          <ul class="cent-nav">
+            <li><a onclick="window.open('https://www.instagram.com/erikkesten/' + location.search)"><i class="fa-brands fa-instagram fa-xs"></i>Instagram Profile</a></li>
+          </ul>
+        </div>
+
+</div>
+
+
+
 
   <h1>OTHER</h1>
 
+<div class="parent-container">
   <div class="grid-other">
 
     <div class="grid-item" onclick="window.open('https://skfb.ly/oQANw' + location.search)">
@@ -271,7 +299,7 @@ erikkes | Gallery
       <img src="img/gifs/mitshu.gif">
       <div class="dark-overlay">
       <p>Low-poly 3D model of a Mitsubishi Evo</p>
-      <ul class="overlay-list">
+      <ul class="project-list">
         <li>Sketchfab</li>
         <ol>&#10095;</ol>
       </ul>
@@ -306,6 +334,13 @@ erikkes | Gallery
 
     </div>
 
+  </div>
+
+  <div class="center">
+    <ul class="cent-nav">
+      <li><a onclick="window.open('https://sketchfab.com/erikkes' + location.search)">Sketchfab Profile</a></li>
+    </ul>
+  </div>
   </div>
 
 <hr>
@@ -400,7 +435,7 @@ window.onclick = function(event) {
   });
 
   VanillaTilt.init(document.querySelectorAll(".grid-item"), {
-  max: 4,
+  max: 8,
   speed: 800,
   reverse: true,
   glare: true,
