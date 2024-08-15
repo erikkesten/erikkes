@@ -670,8 +670,6 @@ padding-left: 1rem;
   margin-right:0.5rem;
   margin-left:0.5rem;
   margin-top: 2rem;
-
-
   font-size: 1rem;
   color: var(--bg);
 
@@ -1725,7 +1723,6 @@ iframe {
   border-radius:1rem;
   border:0.1rem solid var(--bord);
   display: flex;
-  cursor: pointer;
   transition: box-shadow .25s;
 }
 
@@ -1889,25 +1886,33 @@ iframe {
 .project-list{
   margin: 0;
   padding: 0;
-
+  display: flex;
 }
 
 .project-list li{
-  font-family: "SpaceGrotesk-Bold", sans-serif;
-  color: var(--backdrop);
-  float: left;
-  display:inline-block;
+  position: absolute;
   list-style-type:none;
-  padding:.3rem 0.6rem;
-  border-radius:0.5rem;
-  margin-left:0.25rem;
-  margin-top:0rem;
-  border:0.075rem solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(0,0,0,0.15);
-  backdrop-filter: blur(0.4rem);
-  font-size: 0.9rem;
-  letter-spacing: -.025em;
-  font-variation-settings: "wght"625;
+  display:inline-block;
+  background-color: var(--crystal);
+  padding:.5rem 1.3rem;
+  border-radius:3rem;
+  margin-right:0.5rem;
+  margin-left:0.5rem;
+  font-size: 1rem;
+  color: var(--bg);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  cursor: pointer;
+  right: 0.5rem;
+  bottom:1rem;
+
+  transition: .4s;
+}
+
+.project-list li:hover{
+  background-color: var(--crystal);
+  color: var(--bg);
+  font-size: 1.1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
 }
 
@@ -1919,12 +1924,11 @@ iframe {
   display:inline-block;
   list-style-type:none;
   padding:.3rem 0.6rem;
-  border-radius:0.5rem;
+  border-radius:1rem;
   margin-left:0.25rem;
   margin-top:0rem;
-  border:0.075rem solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(0,0,0,0.15);
-  backdrop-filter: blur(0.4rem);
+  background-color: rgba(0,0,0,0.4);
+
   font-size: 0.9rem;
   letter-spacing: -.025em;
 }
@@ -1946,12 +1950,12 @@ iframe {
   display:inline-block;
   list-style-type:none;
   padding:.3rem 0.6rem;
-  border-radius:0.5rem;
+  border-radius:0.6rem;
   margin-left:0.25rem;
   margin-top:0rem;
   border:0.075rem solid rgba(255, 255, 255, 0.3);
   background-color: rgba(0,0,0,0.15);
-  backdrop-filter: blur(0.4rem);
+
   font-size: 0.9rem;
   letter-spacing: .01em;
   font-variation-settings: "wght"625;
