@@ -1077,11 +1077,7 @@ uncomment this part if you haven't added this code anywhere else
 
 }
 
-.column iframe {
-  margin-top: 14px;
-  width: 560px;
-  height: 300px;
-}
+
 
 .card {
   position: relative;
@@ -1654,6 +1650,14 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:1rem;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
+}
+
+.main-video {
+  justify-content: center; /* Horizontally center the grid */
+  align-items: center; /* Vertically center the grid */
+  padding: 0;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 
 .video-content {
@@ -2722,6 +2726,10 @@ img {
 
   }
 
+  .grid-gal{
+        grid-template-columns: repeat(2, auto);
+  }
+
 
 
   .grid-other {
@@ -2912,6 +2920,16 @@ img {
   .video-content {
     display: grid;
 
+  }
+
+  iframe {
+      aspect-ratio: 16 / 9;
+      width: 100% !important;
+      padding: 0;
+  }
+
+  .main-video{
+    margin: 0;
   }
 
   .grid-video{
