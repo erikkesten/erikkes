@@ -91,19 +91,22 @@
   --backdrop: #fbfaf5;
   --greyed: #d8d8d6;
   --border:#17184b;
+
   --text: #0d0015;
   --tool: #f7fcfe;
   --card: #c0c6c9;
   --active: #ebeae4;
 
 
-  --bg: #020e11;
-  --boxed: #04171b;
-  --box: #041114;
-  --air: #f5f7ed;
-  --bord: #E3EFF330;
-  --crystal: #d6fb1f;
+  --bg: #f2f2ea;
+  --boxed: #fefef7;
+  --box: #f2f2ea;
+  --air: #2a3401;
+  --bord: #2a340170;
+  --crystal: #d1f443;
+  --bly: #567C09;
   --recent: #A1B929;
+  --nyland: #EBF094;
 }
 
 html{
@@ -287,6 +290,7 @@ hr{
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, var(--bord), var(--air), var(--bord));
+  opacity: 0.2;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -355,7 +359,7 @@ hr{
   justify-content: flex-end;
   fill:var(--air);
   fill-rule:nonzero;
-  filter: drop-shadow(0 0 1.2rem var(--bg));
+
 }
 
 .main {
@@ -372,7 +376,7 @@ hr{
   margin:0;
   margin-bottom: 0.15rem;
   letter-spacing: 0.02em;
-  color:var(--crystal);
+  color:var(--bly);
   font-weight: normal;
 }
 
@@ -664,14 +668,16 @@ padding-left: 1rem;
 .competence li{
   list-style-type:none;
   display:inline-block;
-  background-color: var(--crystal);
+  background-color: var(--nyland);
   padding:.5rem 1.3rem;
   border-radius:3rem;
   margin-right:0.5rem;
   margin-left:0.5rem;
   margin-top: 2rem;
   font-size: 1rem;
-  color: var(--bg);
+  color: var(--air);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
 
 }
 
@@ -791,7 +797,6 @@ padding: 0;
   font-size: 1.25rem;
     margin-left:3rem;
     cursor: pointer;
-    text-shadow: 0 0 1.2rem var(--bg);
 }
 
 .nav i{
@@ -1364,14 +1369,12 @@ uncomment this part if you haven't added this code anywhere else
   .swiper {
     width: 100%;
     border-radius: 1rem;
-    border:0.1rem solid var(--bord);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
-    transition: box-shadow .25s;
+
 
   }
-  .swiper:hover {
-    box-shadow: 0px 20px 20px -3px rgba(0,0,0,0.2);
-  }
+
 
   .swiper-slide {
     display: flex;
@@ -1632,7 +1635,7 @@ uncomment this part if you haven't added this code anywhere else
 .exp-container {
   background-color: var(--boxed);
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0.1rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius:1rem;
@@ -1725,14 +1728,14 @@ iframe {
   position: relative;
   overflow: hidden;
   border-radius:1rem;
-  border:0.1rem solid var(--bord);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   display: flex;
   transition: box-shadow .25s;
 }
 
 .grid-video{
   border-radius:1rem;
-  border:0.1rem solid var(--bord);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   cursor: pointer;
   margin: 0rem;
   margin-top: 1rem;
@@ -1750,7 +1753,7 @@ iframe {
 }
 
 .grid-item:hover {
-  box-shadow: 0px 20px 20px -3px rgba(0,0,0,0.2);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 6px 6px 8px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .grid-item img {
@@ -1903,7 +1906,7 @@ iframe {
   margin-right:0.5rem;
   margin-left:0.5rem;
   font-size: 1rem;
-  color: var(--bg);
+  color: var(--air);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   cursor: pointer;
   right: 0.5rem;
@@ -1914,7 +1917,7 @@ iframe {
 
 .project-list li:hover{
   background-color: var(--crystal);
-  color: var(--bg);
+
   font-size: 1.1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
@@ -1955,10 +1958,11 @@ iframe {
   list-style-type:none;
   padding:.3rem 0.6rem;
   border-radius:0.6rem;
-  margin-left:0.25rem;
+  margin-left:0.4rem;
   margin-top:0rem;
-  border:0.075rem solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(0,0,0,0.15);
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: rgba(0,0,0,0.05);
 
   font-size: 0.9rem;
   letter-spacing: .01em;
@@ -1981,6 +1985,9 @@ iframe {
   font-size: 0.9rem;
   letter-spacing: -.025em;
 }
+
+
+
 
 
 
@@ -2092,7 +2099,7 @@ iframe {
 .avatar {
   overflow: hidden;
   border-radius:50%;
-  border:0.1rem solid var(--bord);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   height: auto;
   grid-column: 2 / 3; /* Image occupies second column */
   max-width: 100%; /* Ensure image doesn't exceed its container */
@@ -2199,15 +2206,15 @@ display:inline-block;
   position: relative;
   overflow: hidden;
   border-radius:1rem;
-  border:0.1rem solid var(--bord);
-  background-color: var(--box);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: var(--bg);
   display: flex;
 
   transition: box-shadow .25s;
 }
 
 .index-block-item h2{
-  color: var(--backdrop);
+  color: var(--air);
   font-size: 1.4rem;
   margin-top: 2rem;
   margin-left: 2rem;
@@ -2216,13 +2223,13 @@ display:inline-block;
 
 
 .index-block-item li{
-  color: var(--backdrop);
+  color: var(--air);
 }
 
 
 
 .index-block-item p{
-  color: var(--backdrop);
+  color: var(--air);
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
   font-size: 1rem;
@@ -2246,7 +2253,7 @@ display:inline-block;
 
 
 .index-block-item:hover{
-  box-shadow: 0px 20px 20px -3px rgba(0,0,0,0.2);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 6px 6px 8px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 
@@ -2273,11 +2280,12 @@ display:inline-block;
   position: relative;
   overflow: hidden;
   border-radius:1rem;
-  border:0.1rem solid var(--bord);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   background-color: var(--crystal);
 
   transition: box-shadow .25s;
   padding: 1.3rem;
+  margin-bottom: 2rem;
 }
 
 .exp-block-item h2{
@@ -2339,7 +2347,7 @@ display:inline-block;
 
 
 .exp-block-item:hover{
-  box-shadow: 0px 20px 20px -3px rgba(0,0,0,0.2);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 6px 6px 8px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 
@@ -2355,7 +2363,7 @@ display:inline-block;
   position: relative;
   overflow: hidden;
   border-radius:1rem;
-  border:0.1rem solid var(--bord);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   background-color: var(--crystal);
 
   transition: box-shadow .25s;
@@ -2421,7 +2429,7 @@ display:inline-block;
 
 
 .ed-block-item:hover{
-  box-shadow: 0px 20px 20px -3px rgba(0,0,0,0.2);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 6px 6px 8px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 
