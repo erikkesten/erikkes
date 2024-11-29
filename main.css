@@ -67,6 +67,12 @@
        url('fonts/ClashGrotesk-Regular.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Junicode';
+  src: local('☺'),
+       url('fonts/Junicode-Bold.ttf') format('truetype');
+}
+
 
 
 
@@ -341,11 +347,13 @@ hr{
 }
 
 .header a{
-  font-family: "SpaceGrotesk", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -.02em;
   font-size: 1.4rem;
   margin: 0px;
   text-decoration: none;
-  letter-spacing: -.025em;
   color: var(--air);
 }
 
@@ -371,27 +379,34 @@ hr{
 }
 
 .main h1{
-  font-family: "ClashGrotesk-Bold", sans-serif;
-  font-size: 2.25rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  font-size: 3rem;
   margin:0;
   margin-bottom: 0.15rem;
-  letter-spacing: 0.02em;
   color:var(--bly);
-  font-weight: normal;
+
 }
 
 
+
 .main a{
-  font-family: "SpaceGrotesk", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.02em;
   font-size: 1.4rem;
   margin: 0px;
   text-decoration: none;
-  letter-spacing: -.025em;
   color: var(--air);
 }
 
 .more{
-  font-family: "SpaceGrotesk-Bold", sans-serif;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.25rem;
   margin-left: 2rem;
   color: var(--air);
@@ -404,6 +419,8 @@ hr{
 
 .main p{
   font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1rem;
   margin: 0px;
   color: var(--air);
@@ -413,8 +430,9 @@ hr{
 }
 
 .main ul, li{
-  font-family: "ClashGrotesk-Medium", sans-serif;
-  letter-spacing: .01em;
+  font-family: "SpaceGrotesk-Bold", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
@@ -666,6 +684,13 @@ padding-left: 1rem;
 }
 
 .competence li{
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.competence li{
   list-style-type:none;
   display:inline-block;
   background-color: var(--nyland);
@@ -718,7 +743,8 @@ padding-left: 60px;
 
 }
 
-.top-nav li{
+.top-
+ li{
   list-style-type:none;
   display:inline-block;
   padding:.6rem 0rem;
@@ -1897,6 +1923,11 @@ iframe {
 }
 
 .project-list li{
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.02em;
+
   position: absolute;
   list-style-type:none;
   display:inline-block;
@@ -2057,14 +2088,16 @@ iframe {
 }
 
 .headington-item-r h1{
-  font-family: "SpaceGrotesk-Bold", sans-serif;
-  letter-spacing: -.025em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.035em;
   color: var(--air);
   font-size:2.6rem;
   margin: 0;
   line-height: 1.2;
-  font-variation-settings: "wght"625;
-  font-weight: 400;
+
+
 
 }
 
@@ -2147,6 +2180,19 @@ iframe {
   position: relative;
   width: 100%;
   height: 100%;
+}
+.overlay li{
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -.04em;
+}
+
+.overlay h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.02em;
 }
 
 .ad{
