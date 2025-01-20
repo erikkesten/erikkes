@@ -1248,8 +1248,8 @@ uncomment this part if you haven't added this code anywhere else
 .button-33 {
   background-color: var(--crystal);
   border-radius: 100px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0em -0.35em 0em inset, rgba(255, 255, 255, 0.5) 0em 0.35em 0em inset, rgba(214,251,31,.2) 0 0rem 2rem;
-  color: var(--bg);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
   cursor: pointer;
   margin-bottom: 2rem;
 
@@ -1272,7 +1272,7 @@ uncomment this part if you haven't added this code anywhere else
 
 
 .button-33:hover {
-  box-shadow: rgba(0, 0, 0, 0.15) 0em -0.35em 0em inset, rgba(255, 255, 255, 0.5) 0em 0.35em 0em inset, rgba(214,251,31,.25) 0 0.3rem 2.2rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 6px 6px 8px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   transform: scale(1.05) rotate(3deg);
 }
 
@@ -1762,6 +1762,17 @@ iframe {
 .grid-video{
   border-radius:1rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  cursor: pointer;
+  margin: 0rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid-short{
+  border-radius:1rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  width: 30% !important;
   cursor: pointer;
   margin: 0rem;
   margin-top: 1rem;
@@ -2987,6 +2998,12 @@ img {
   }
 
   .grid-video{
+    margin: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .grid-short{
+    width: 100% !important;
     margin: 0;
     margin-bottom: 1rem;
     margin-top: 1rem;
