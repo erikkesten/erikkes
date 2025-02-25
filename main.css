@@ -74,7 +74,15 @@
 }
 
 
+// <weight>: Use a value from 100 to 1000
+// <uniquifier>: Use a unique and descriptive class name
 
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 
 
 
@@ -347,14 +355,14 @@ hr{
 }
 
 .header a{
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", serif;
   font-weight: 900;
-  font-style: italic;
-  letter-spacing: -.02em;
+
+  letter-spacing: -.025em;
   font-size: 1.4rem;
   margin: 0px;
   text-decoration: none;
-  color: var(--air);
+  color: var(--bly);
 }
 
 .header svg{
@@ -379,11 +387,9 @@ hr{
 }
 
 .main h1{
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", serif;
   font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.02em;
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin:0;
   margin-bottom: 0.15rem;
   color:var(--bly);
@@ -393,18 +399,18 @@ hr{
 
 
 .main a{
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", serif;
   font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.02em;
+  letter-spacing: -.025em;
   font-size: 1.4rem;
   margin: 0px;
   text-decoration: none;
-  color: var(--air);
+  color: var(--bly);
 }
 
 .more{
-  font-family: "SpaceGrotesk", sans-serif;
+  font-family: "DM Sans", serif;
+    letter-spacing: -0.025em;
   font-weight: 400;
   font-style: normal;
   font-size: 1.25rem;
@@ -418,20 +424,19 @@ hr{
 }
 
 .main p{
-  font-family: "SpaceGrotesk", sans-serif;
-  font-weight: 400;
+  font-family: "DM Sans", serif;
   font-style: normal;
+  letter-spacing: -0.015em;
   font-size: 1rem;
   margin: 0px;
   color: var(--air);
   line-height: 1.4;
-  letter-spacing: -.04em;
   margin-bottom: 2rem;
 }
 
 .main ul, li{
-  font-family: "SpaceGrotesk-Bold", sans-serif;
-  font-weight: 400;
+  font-family: "DM Sans", serif;
+ letter-spacing: -.025em;
   font-style: normal;
 }
 
@@ -684,10 +689,9 @@ padding-left: 1rem;
 }
 
 .competence li{
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", serif;
   font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.02em;
+
 }
 
 .competence li{
@@ -1207,7 +1211,7 @@ uncomment this part if you haven't added this code anywhere else
 
 
 .comic-button {
-  font-family: 'SpaceGrotesk-Bold';
+  font-family: "DM Sans", serif;
   text-decoration: none;
   display: inline-block;
   padding: 0.7rem 1.7rem;
@@ -1557,7 +1561,7 @@ uncomment this part if you haven't added this code anywhere else
   #next{right:-50px; border-radius:7px 0px 0px 7px;}
   #previous{left:-50px; border-radius:0px 7px 7px 7px;}
   #counter{
-    font-family: "SpaceGrotesk-Bold", sans-serif;
+      font-family: "DM Sans", serif;
   	top: 30px;
   	right:35px;
   	width:auto;
@@ -1934,10 +1938,9 @@ iframe {
 }
 
 .project-list li{
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", serif;
   font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 
   position: absolute;
   list-style-type:none;
@@ -2099,14 +2102,12 @@ iframe {
 }
 
 .headington-item-r h1{
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", serif;
   font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.035em;
   color: var(--air);
-  font-size:2.6rem;
+  font-size:2.2rem;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.1;
 
 
 
@@ -2193,17 +2194,17 @@ iframe {
   height: 100%;
 }
 .overlay li{
-  font-family: "SpaceGrotesk", sans-serif;
+  font-family: "DM Sans", serif;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: -.04em;
+
 }
 
 .overlay h2{
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.02em;
+  font-family: "DM Sans", serif;
+  font-weight: Bold;
+    letter-spacing: -0.025em;
+
 }
 
 .ad{
@@ -2834,7 +2835,7 @@ img {
 
   }
   .headington-item-r h1{
-    font-size: 2.05rem;
+    font-size: 1.9rem;
   }
 
   .txt{
@@ -2906,7 +2907,7 @@ img {
     height: 16rem;
   }
   .headington-item-r h1{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .txt{
@@ -3038,7 +3039,7 @@ img {
   }
 
   .headington-item-r h1{
-    font-size: 1.77rem;
+    font-size: 1.6rem;
   }
 
   .headington-item {
