@@ -157,7 +157,11 @@ body{
   overscroll-behaviour:none;
   font-size: .875rem;
   line-height: 1.4;
-  background-color: var(--bg);
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E0E0CF, #F8F8F1, #E0E0CF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E0E0CF, #F8F8F1, #E0E0CF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 
 
 
