@@ -1663,6 +1663,7 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:1rem;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
 }
 
@@ -1675,6 +1676,7 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:1rem;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
 }
 
@@ -1687,6 +1689,7 @@ uncomment this part if you haven't added this code anywhere else
   border-radius:1rem;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .main-video {
