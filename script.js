@@ -1,48 +1,45 @@
-// https://github.com/ashthornton/asscroll
-import ASScroll from 'https://cdn.skypack.dev/@ashthornton/asscroll'
+const hoverContainers = document.querySelectorAll('.grid-item'); // Target ALL containers
+const customCursor = document.querySelector('.custom-cursor');
 
-const pageEl = document.querySelector('.page')
+// Track mouse movement
+document.addEventListener('mousemove', (e) => {
+  customCursor.style.left = `${e.clientX}px`;
+  customCursor.style.top = `${e.clientY}px`;
+});
 
-const asscroll = new ASScroll({
-    // containerElement: '.my-container',
-    scrollElements: pageEl,
-    ease: 0.1,
-    touchEase: 1,
-    customScrollbar: true,
-    scrollbarEl: '.my-scrollbar',
-    scrollbarHandleEl: '.my-scrollbar-handle',
-    scrollbarStyles: true,
-    disableNativeScrollbar: true,
-    touchScrollType: 'scrollTop',
-    disableRaf: true,
-    disableResize: true,
-    limitLerpRate: true,
-    blockScrollClass: '.asscroll-block'
-})
+// Loop through all hover containers and add event listeners
+hoverContainers.forEach(container => {
+  container.addEventListener('mouseenter', () => {
+    customCursor.style.opacity = '1';
+    customCursor.style.transform = 'translate(-50%, -50%) scale(1)'; // Scale up
+  });
 
-window.addEventListener('load', () => {
-    asscroll.enable()
-    maxScrollEl.textContent = asscroll.maxScroll
-})
+  container.addEventListener('mouseleave', () => {
+    customCursor.style.transform = 'translate(-50%, -50%) scale(0)'; // Scale down
+  });
+});
 
-function onRaf() {
-    asscroll.update()
-    requestAnimationFrame(onRaf)
-}
-requestAnimationFrame(onRaf)
 
-window.addEventListener('resize', () => {
-    const width = window.innerWidth
-    const height = window.innerHeight
-    asscroll.resize({ width, height})
-    maxScrollEl.textContent = asscroll.maxScroll
-})
 
-const targetPosEl = document.querySelector('[data-targetPos]')
-const currentPosEl = document.querySelector('[data-currentPos]')
-const maxScrollEl = document.querySelector('[data-maxScroll]')
-const scrollEndEl = document.querySelector('[data-scrollEnd]')
 
-asscroll.on('scroll', scrollPos => targetPosEl.textContent = scrollPos)
-asscroll.on('scrollEnd', scrollPos => scrollEndEl.textContent = scrollPos)
-asscroll.on('update', ({ currentPos }) => currentPosEl.textContent = currentPos)
+
+
+
+
+
+const hamburger = document.querySelector('.hamburger a.main-nav-toggle');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', (e) => {
+  e.preventDefault();
+  hamburger.classList.toggle('active-menu');
+  drawer.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  hamburger.classList.remove('active-menu');
+  drawer.classList.remove('active');
+  overlay.classList.remove('active');
+});
