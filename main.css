@@ -1207,6 +1207,9 @@ cursor:default;
 
 }
 
+
+
+
 .center{
   text-align: center;
 }
@@ -2588,6 +2591,41 @@ h4:hover {
 }
 
 
+
+
+
+.grid-gal-shorts {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-content: space-between; /* Distribute extra space evenly between grid items */
+  grid-auto-rows: minmax(1rem, auto); /* Set minimum and maximum row height */
+}
+
+
+
+.grid-item-shorts {
+  position: relative;
+  overflow: hidden;
+  border-radius:2rem;
+  aspect-ratio: 4 / 5;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  transition: box-shadow .8s;
+  cursor: none; /* Hide default cursor */
+  z-index: 1; /* Ensure this is lower than the custom cursor's z-index */
+}
+
+
+.grid-item-shorts:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 16px 16px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+
+
+
+
 .overlay-content{
   position: absolute;
   bottom: 0;
@@ -2652,11 +2690,7 @@ h4:hover {
   padding: 0;
 }
 
-iframe {
-    aspect-ratio: 16 / 9;
-    width: 100% !important;
 
-}
 
 
 .grid-video{
@@ -2680,8 +2714,9 @@ iframe {
 }
 
 .grid-short{
-  border-radius:1rem;
+  border-radius:2rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
   width: 30% !important;
   cursor: pointer;
   margin: 0rem;
@@ -2689,7 +2724,6 @@ iframe {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
 
 
 
@@ -3763,6 +3797,12 @@ img {
 
   }
 
+  .grid-gal-shorts {
+
+    grid-template-columns: repeat(2, auto);
+
+  }
+
   .header {
     width: 95%;
     gap: 0px;
@@ -3843,6 +3883,10 @@ img {
   }
 
   .grid-gal{
+        grid-template-columns: repeat(2, auto);
+  }
+
+  .grid--shorts{
         grid-template-columns: repeat(2, auto);
   }
 
@@ -4042,6 +4086,12 @@ img {
 
   }
 
+  .grid-gal-shorts{
+
+    grid-template-columns: repeat(2, auto);
+
+  }
+
   .drawer-links li a {
 
     letter-spacing: 0rem;
@@ -4130,6 +4180,10 @@ img {
   }
 
   .grid-gal {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .grid-gal-shorts {
     grid-template-columns: repeat(1, auto);
   }
 
