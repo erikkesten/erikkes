@@ -144,6 +144,16 @@
 
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: var(--white);
+  background: var(--comp);
+}
+
+::selection {
+  color: var(--white);
+  background: var(--comp);
+}
+
 html{
   scrollbar-color: var(--red) var(--bg);
 
