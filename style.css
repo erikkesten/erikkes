@@ -113,8 +113,25 @@ ul {
 }
 
 
+
+
 /* TABLET */
 @media (min-width: 768px) {
+    a{
+      font-size: 15px;
+    }
+    p{
+      font-size: 15px;
+    }
+    h1{
+      font-size: 17px;
+    }
+    h3{
+      font-size: 15px;
+    }
+    li{
+      font-size: 15px;
+    }
 }
 
 /* DESKTOP */
@@ -237,10 +254,6 @@ img[data-hover] {
 
 
 
-/* TABLET */
-@media (min-width: 768px) {
-
-}
 
 /* DESKTOP */
 @media (min-width: 1024px) {
@@ -401,6 +414,11 @@ img[data-hover] {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+@media (min-width: 768px) {
+    .floating {
+    font-size: 15px;
+    }
 }
 @media (min-width: 1024px) {
     .floating {
