@@ -543,3 +543,7 @@ body.lightbox-open .navbar {
 }
 
 }
+
+.email-link{
+  cursor: pointer;
+}
