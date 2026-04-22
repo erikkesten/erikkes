@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Vinyl album.</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">Erik Kesten</a>
+        <a href="info.html" class="work">Information</a>
+        <a href="contact.html" class="contact">Contact</a>
+    </nav>
+
+    <main>
+        <section class="grid">
+            <article class="col">
+                <h1>Vinyl album</h1>
+            </article>
+            <article class="col">
+                <ul>
+                    <li>Graphic design</li>
+                    <li>Packaging</li>
+                    <li>Print</li>
+                    <li>Post-press</li>
+                </ul>
+            </article>
+            <article class="col span-half">
+                <p>A complete alternative version of Gary Moore's Still Got The Blues on vinyl. I've designed album cover, inner sleeve and center labels. Together with print and packaging design as well as cutting made by me.</p>
+            </article>
+        </section>
+
+  
+
+        <section class="grid no-pad-bot rtl">
+            <article class="col span-half clickable">
+                <figure>
+                    <img src="Bilder/gary.jpeg">
+                </figure>
+            </article>
+        </section>
+        <section class="grid rtl">
+            <article class="col clickable">
+                <figure>
+                    <img src="Bilder/gary2.jpeg">
+                </figure>
+            </article>
+            <article class="col clickable">
+                <figure>
+                    <img src="Bilder/gary3.jpg">
+                </figure>
+            </article>
+            <article class="col clickable">
+                <figure>
+                    <img src="Bilder/gary4.jpeg">
+                </figure>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bottom">
+        <p>© 2025 Erik Kesten / erikkes</p>
+    </footer>
+
+    <footer class="floating">
+        <time id="date"></time>
+        <time id="clock"></time>
+    </footer>
+
+    
+<div class="lightbox" id="lightbox" aria-hidden="true">
+
+    <img class="lightbox-image" src="" alt="">
+    <p class="lightbox-caption"></p>
+
+    <button class="lightbox-close" aria-label="Stäng"><i data-lucide="x"></i></button>
+    <button class="lightbox-prev" aria-label="Föregående"><i data-lucide="chevron-left"></i></button>
+    <button class="lightbox-next" aria-label="Nästa"><i data-lucide="chevron-right"></i></button>
+
+</div>
+    
+
+</body>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</html>
